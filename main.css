@@ -1,0 +1,18 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  background-color: orange;
+  color: cornsilk;
+  font-size: 60px;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div {
+  background-color: lavender;
+  padding-bottom: 45%;
+}
