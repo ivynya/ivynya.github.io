@@ -1,0 +1,6 @@
+div {
+  background-color: inherit;
+  border: 5px solid grey;
+  float: right;
+  padding-right: 3vw;
+}
