@@ -1,6 +1,8 @@
 #featured {
   background-color: inherit;
   border: 5px solid grey;
+  border-top: 0;
+  border-right: 0;
   float: right;
   height: 100%;
   padding-right: 5vw;
