@@ -6,6 +6,7 @@ body {
 
 section {
   background-color: #ffffff;
+  padding-bottom: 1vw;
 }
 
 h1 {
@@ -42,12 +43,27 @@ h1 {
   background-color: #b6b6c0;
 }
 
-h2 {
+body h2 {
   font-size: 2vw;
-  padding-left: 1vw;
+  padding-left: 1.75vw;
 }
 
-p {
+body p {
   font-size: 1vw;
-  padding-left: 1vw;
+  letter-spacing: 0.075vw;
+  padding-left: 1.75vw;
+  padding-right: 35vw;
+}
+
+footer {
+  background-color: #eeeeee;
+  padding-top: 0.5vw;
+  padding-bottom: 2vw;
+}
+
+footer p {
+  font-family: "Verdana", sans-serif;
+  font-size: 0.75vw;
+  padding-left: 1.75vw;
+  padding-right: 1.75vw;
 }
