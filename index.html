@@ -2,32 +2,36 @@
 <html>
 <head>
   <title>SDBagel's Great Website</title>
-  <link rel="stylesheet" type="text/css" href="css\main.css">
-  <link rel="stylesheet" type="text/css" href="css\index.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
   <h1>SDBagel's Super Well-Made Website</h1>
-  <section>
+  <section id="content">
     <ul id="navbar">
       <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
       <li class="navitem"><a href="about.html" class="navlink">About</a></li>
       <li class="navitem"><a href="projects.html" class="navlink">Projects</a></li>
       <li class="navitem"><a href="contact.html" class="navlink">Contact</a></li>
     </ul>
+    <a id="showfeatured" href=none>Show Featured Items</a>
     <div id="featured">
       <h2>Featured Items</h2>
       <ul>
-        <li class="featitem"><i class="material-icons">movie</i><a href="static\timelapse.mp4">Timelapse</a></li>
+        <li class="featitem"><i class="material-icons">movie</i><a href="static/timelapse.mp4">Timelapse</a></li>
         <li class="featitem"><i class="material-icons">edit</i><a href="404.html">Placeholder</a></li>
         <li class="featitem"><i class="material-icons">edit</i><a href="404.html">Placeholder</a></li>
         <li class="featitem"><i class="material-icons">edit</i><a href="404.html">Placeholder</a></li>
       </ul>
+      <a id="hidefeatured" href=none>Hide Featured Items</a>
     </div>
     <h2>Hey There!</h2>
     <p>I'm Kyle, a developer working as a freelancer on both personal and commissioned projects (for very reasonable rates, too!). Here, you can find projects and various things that I've made available to the public. Feel free to use any of these for your own use, as long as you don't steal it and call it yours.</p>
     <video height="480" width="640" controls>
-      <source src="static\timelapse.mp4" type="video/mp4">
+      <source src="static/timelapse.mp4" type="video/mp4">
         Your browser doesn't seem to support this video format! Try viewing on a desktop browser if on mobile. Even Internet Explorer works. Internet Explorer! Now that's something.
     </video>
   </section>
