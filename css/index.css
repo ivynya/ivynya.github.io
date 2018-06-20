@@ -1,16 +1,14 @@
-#contentheader {
-  padding-left: 33vw;
-  text-align: left;
-}
-
 #featured {
   background-color: inherit;
   border-left: 5px solid grey;
+  display: none;
   float: right;
   height: 100%;
 }
 
 #featured h2 {
+  padding: 0;
+  padding-left: 1.75vw;
   padding-right: 5vw;
 }
 

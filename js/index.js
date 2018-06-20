@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $("#featured").slideDown();
+
   $("#showfeatured").click(function() {
     $("#showfeatured").slideUp();
     $("#showfeatured").promise().done(function() {
