@@ -42,7 +42,6 @@ def checkModField(modField):
                 print("PASSED")
             else:
                 print("FAILED")
-
         #Inverses
         aInvPassed = False
         mInvPassed = False
@@ -52,12 +51,12 @@ def checkModField(modField):
 
             if ((x*i)%modField == 1 or x == 0):
                 mInvPassed = True
-                
+
         if (not(aInvPassed and mInvPassed)):
-            print("Inverses Failed for x value:",x)
+            print("One or more inverses failed for x value:",x)
             passed = False
 
     print("MOD FIELD",modField,"PASSED:",passed)
-
 while(True):
     checkModField(modField)
+    modField = int(input("Mod Field >"))
