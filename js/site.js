@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#featured").slideDown();
+  $("#infoblock").slideDown();
 
   $("#showfeatured").click(function() {
     $("#showfeatured").slideUp();
