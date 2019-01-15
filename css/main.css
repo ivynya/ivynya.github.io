@@ -46,6 +46,14 @@ h2 {
   padding-left: 10vw;
 }
 
+h3 {
+  padding-left: 10vw;
+}
+
+.datecaption {
+  margin-top: -3vh;
+}
+
 p {
   font-size: 1vw;
   letter-spacing: 0.075vw;

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SDBagel's Great Website</title>
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <h1>SDBagel's Super Well-Made Website</h1>
+  <section id="content">
+    <ul id="navbar">
+      <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
+      <li class="navitem"><a href="current.html" class="navlink">Current Work</a></li>
+      <li class="navitem"><a href="about.html" class="navlink">About</a></li>
+      <li class="navitem"><a href="contact.html" class="navlink">Contact</a></li>
+    </ul>
+    <h2 class="contentheader">Launch of Current Work</h2>
+    <p class="datecaption">January 14, 2019</p>
+    <p>Today will be the launch of the Current Work tab for this site, which will detail exactly what I've been working on. This was renamed from A Commit A Day (because once I fail to meet that goal, this would die too). This page will recieve bimonthly updates, once on the 14 of the month, and another on the 30/31st of the month, to give an update on what's happening with all SDProductions and SDBrand products. Eventually I'd like to integrate some levels of statistics and pretty graphs, but not now. The last two weeks from the start of 2019 to now have been quite good, and a fair amount of work was accomplished during that period.</p>
+    <h3>Multispatial Logistics:</h3>
+    <p>Multispatial Logistics, the EVE Online based webservice for players built on ASP.NET Core MVC 2.1, began a total redo mainly because the old project broke for some reason (who knows why). It now uses a localdb SQL database to hold stargate information which means that the site will no longer return an error code because it was taking too long to call ESI several hundred times to get static data. It features a basic frontend and a placeholder for OAuth, which means fun things can be integrated such as using character skills, implants, active ship, fatigue information, location and destination data, and more to provide a better experience. Right now, the backend is about 50% of where I'd like it to be - ship database information still needs to be added, along with some related calculations regarding align times and such which would provide more accuracy towards time calculations. The frontend is practically nonexistent save for a basic form element and SSO button, so that definitely needs to be improved upon as well. I have some ideas for what I want the frontend to look like, but unfortunately no time to properly sketch them out to further polish and implement the ideas.</p>
+    <h3>SDProductions Official Website</h3>
+    <p>The SDProductions website has also been redesigned to feature a cleaner, more smooth browsing experience and be more concise and clear in its delivery of information. It has been changed from the previous one-page experience to a tabbed single-page no-scroll site, which I think looks cleaner. It has been modified (not using fluid grids or anything) to look decent on mobile screens and 2:3 screens, but currently has not been tested on ultrawide screens and if anything, probably breaks.</p>
+    <h3>EVE ExtChat</h3>
+    <p>EVE ExtChat, a side project to Multispatial Logistics, is a Win32 based tool meant for use alongside the EVE Online client. It is 100% EULA and TOS compliant, as it only reads from log files the game outputs and never interacts with the game directly. The idea and purpose of ExtChat is to provide an enhanced experience with EVE's chat system, bringing EVE's chat more inline with features expected from a modern chat platform such as Discord. Planned features include notification sounds whenever your character or an alt character's name gets mentioned in a channel, with Do Not Disturb modes available, localized intelligence alerts for enemy hostiles reported in in-game intel channels, and customizable alerts related to in-game chat. It is the first Win32 app by SDProductions to use the latest SDBrand theming consistency. However, as it is a side project, it will likely see much less attention than other ones at the moment.</p>
+    <h3>SDBranding & You</h3>
+    <p>The SDProductions theme has been universalized into one single theming style, SDBrand! SDBrand will be integrated into all SDProductions products in the near future, and will come on our apps such as Trackr, Cynobroad, and ExtChat. SDBrand will also be found on all of our websites soon, including this one, which will come into a redesign in the near future when I have some time. The basic SDBrand theming style can be found on the wiki of the SDProductions GitHub Pages site repo.</p>
+    <h3>Conclusion:</h3>
+    <p>SDBrand is here, EVE stuff is getting worked on, and websites are being redesigned along with existing SDProductions products. Exciting! That's about it for these two weeks. Check back in another two to see what great things have been bestowed upon you!</p>
+  </section>
+</body>
+<footer>
+  <p>Not Copyrighted, SDProductions and Associates 2018. All work featured on this website was created by me. Some icons provided by <a href="material.io/tools/icons">Google Material Design's open source icon project</a>. For any inquiries, <a href="contact.html">contact us.</a></p>
+</footer>
+</html>
