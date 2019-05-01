@@ -3,22 +3,26 @@
 <head>
   <title>SDBagel's Great Website</title>
   <link rel="icon" type="image/x-icon" href="static/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="js/site.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/site.css">
 </head>
 <body>
   <h1>SDBagel's Super Well-Made Website</h1>
   <section id="content">
     <ul id="navbar">
       <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
-      <li class="navitem"><a href="blog.html" class="navlink">Current Work</a></li>
       <li class="navitem"><a href="about.html" class="navlink">About</a></li>
       <li class="navitem"><a href="contact.html" class="navlink">Contact</a></li>
     </ul>
     <p><a href="index.html">See Newer Posts</a></p>
     <br>
+    <h2 class="contentheader">Status Update</h2>
+    <p class="datecaption">February 18, 2019</p>
+    <p>Hey there,</p>
+    <p>This is just a quick site reorganization update and report on progress for Cynobroad, our main area of focus right now. Current work is now located in the home section, as that is much more important than these smaller style less important blogs, and random blogs will be here. Everything will still get dropped into the archive after the next post comes out. Exciting work is happening with Cynobroad, with the server and client now completely using a packet-like structure instead of the url scheme, which allows much better maintainability, readability, and expandability. This, along with another backend update, should allow us to bring multiple server connections and multiple channels per server into reality much easier, as well as give us a framework for images and emoji to be added to the message. As always, our testing yielded that Cynobroad uses less than 20 MB of RAM, even with the self-hosting option enabled, making our app lightweight and quick to use. On the frontend side of things, Cynobroad now has notification status indicators in place, allowing users to change from Online, Away, Busy, and Invisible modes. Functionality is currently nonexistent with this, as Cynobroad is currently incapable of sending a desktop notification or allow users to simulate being disconnected from the server without actually disconnecting, but the proof of concept is there and shows we can expand the app functionality using the packet structure. The next few updates of Cynobroad will be fixing issues with disconnection and unexpected server closure, shutting down a server safely, and moving the client code to a separate class to allow multiple client classes to be generated, similar to the server. This will provide the basis for multiple server connections. Stay tuned!</p>
+    <h2 class="contentheader">Renovating Cynobroad and Trackr</h2>
+    <p class="datecaption">February 14, 2019</p>
+    <p>While EVE projects are still being put on hold, some ideas from them may be adapted to Trackr and Cynobroad, such as window resizing techniques. This allows our friends using 4K screens or other higher than 1080p resolutions to feel comfortable using our applications. Meanwhile, Trackr's data export feature has been temporarily removed and will be redesigned with something better and more intuitive to use. Live autosaving will likely make it into this new system, along with a better folder structure and in-app buttons to find these exported files, saving you having to dig through your install directory. Trackr will also likely have a small UI redesign, making the expanded version of the app the default launch state, giving more room for functionality and making the functions of Trackr more visible to the user. Cynobroad is currently undergoing the redesign to the new SDBrand, and will see some new features like status indicators, chat history, and user profiles.</p>
+    <p>Development on applications is going slowly, but hopefully that pace will increase a bit soon, with our newest member on the team to help out, <a href="https://github.com/Spazzlo">Spazzlo</a>! He will assist with the overall development and plans of SDProductions.</p>
     <h2 class="contentheader">Planned and Upcoming Work</h2>
     <p class="datecaption">January 31, 2019 (Publish: February 9, 2019)</p>
     <p>Because there was little actual work done between the 14th and the end of January, this post is late by about a week and will just cover what is happening in the future. This post will only cover work and plans from the 14th to the 31st, so everything from the 1st to the 14th of February will be covered in a few days!</p>
