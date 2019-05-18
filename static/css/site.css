@@ -1,0 +1,102 @@
+html {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+}
+
+.content {
+  width: 70rem;
+  margin: auto;
+  margin-top: 5rem;
+  text-align: justify;
+}
+
+.left {
+  width: 20rem;
+  float: left;
+}
+
+#profile {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 2rem;
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  float: left;
+}
+
+.contact p {
+  margin-left: 4rem;
+}
+
+.right {
+  width: 50rem;
+  float: right;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #55f;
+}
+
+.project {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 1rem;
+}
+
+.project img {
+  border-radius: 25%;
+  width: 5rem;
+  float: left;
+}
+
+.project h3 {
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 6rem;
+}
+
+.project p {
+  margin: 0.5rem 0rem;
+  margin-left: 6rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+}
