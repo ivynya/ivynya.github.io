@@ -1,6 +1,6 @@
-body {
+html {
   font-family: "Trebuchet MS", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .content {
@@ -42,6 +42,15 @@ body {
   float: right;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #55f;
+}
+
 .project {
   padding: 1rem;
   background-color: #eee;
@@ -72,4 +81,22 @@ h1 {
 p {
   font-size: 1.2rem;
   line-height: 2rem;
+}
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
 }
