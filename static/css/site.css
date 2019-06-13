@@ -22,6 +22,10 @@ html {
   margin-top: 2rem;
 }
 
+#contactinfo {
+  width: 20rem;
+}
+
 .contact {
   margin-top: 2rem;
 }
@@ -87,11 +91,15 @@ p {
   html {
     font-size: 12px;
   }
+  .clear {
+    clear: both;
+  }
   .content {
     width: 75rem;
   }
-  .clear {
-    clear: both;
+  #contactinfo {
+    float: right;
+    margin-right: 2rem;
   }
   .left {
     width: 75rem;
@@ -100,10 +108,6 @@ p {
   }
   #profile {
     float: left;
-  }
-  .contact {
-    margin-left: 45rem;
-    margin-top: 2rem;
   }
   .right {
     width: 75rem;
@@ -137,7 +141,7 @@ p {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .content {
     width: 50rem;
   }
@@ -145,7 +149,6 @@ p {
     width: 50rem;
   }
   .contact {
-    margin-left: 28rem;
     margin-top: 2.5rem;
   }
   .right {
@@ -174,8 +177,10 @@ p {
     width: 10rem;
     height: 10rem;
   }
+  #contactinfo {
+    width: 15rem;
+  }
   .contact {
-    margin-left: 12rem;
     margin-top: 1rem;
   }
   .contact img {
