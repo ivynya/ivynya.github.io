@@ -87,6 +87,51 @@ p {
   html {
     font-size: 12px;
   }
+  .content {
+    width: 75rem;
+  }
+  .left {
+    width: 75rem;
+    margin: auto;
+    float: none;
+  }
+  #profile {
+    float: left;
+  }
+  .contact {
+    margin-left: 52rem;
+    margin-top: 2.5rem;
+  }
+  .right {
+    width: 75rem;
+    margin: auto;
+    margin-top: 6rem;
+    float: none;
+    clear: both;
+  }
+  .project img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .project h3 {
+    margin-left: 6rem;
+  }
+  .project p {
+    margin-left: 6rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -95,26 +140,27 @@ p {
   }
   .left {
     width: 50rem;
-    margin: auto;
-    float: none;
-  }
-  #profile {
-    float: left;
   }
   .contact {
-    margin-left: 32rem;
+    margin-left: 28rem;
     margin-top: 2.5rem;
   }
   .right {
     width: 50rem;
-    margin: auto;
-    margin-top: 6rem;
-    float: none;
-    clear: both;
+  }
+  .project img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .project h3 {
+    line-height: 3.5rem;
+  }
+  .project p {
+    display: none;
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 650px) {
   .content {
     width: 28rem;
   }
@@ -135,6 +181,7 @@ p {
   }
   .contact p {
     margin-left: 3rem;
+    font-size: 1.2rem;
   }
   .right {
     width: 28rem;
