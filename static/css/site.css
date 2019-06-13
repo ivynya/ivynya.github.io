@@ -52,26 +52,26 @@ a:hover {
 }
 
 .project {
-  padding: 1rem;
+  padding: 0.6rem;
   background-color: #eee;
   border-radius: 1rem;
 }
 
 .project img {
   border-radius: 25%;
-  width: 5rem;
+  width: 4rem;
   float: left;
 }
 
 .project h3 {
   margin: 0;
-  margin-top: 0.5rem;
-  margin-left: 6rem;
+  margin-top: 0.4rem;
+  margin-left: 5rem;
 }
 
 .project p {
-  margin: 0.5rem 0rem;
-  margin-left: 6rem;
+  margin: 0.2rem 0rem;
+  margin-left: 5rem;
 }
 
 h1 {
@@ -90,13 +90,54 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-  html {
-    font-size: 8px;
+  .content {
+    width: 50rem;
+  }
+  .left {
+    width: 50rem;
+    margin: auto;
+    float: none;
+  }
+  #profile {
+    float: left;
+  }
+  .contact {
+    margin-left: 32rem;
+    margin-top: 2.5rem;
+  }
+  .right {
+    width: 50rem;
+    margin: auto;
+    margin-top: 6rem;
+    float: none;
+    clear: both;
   }
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 7px;
+@media screen and (max-width: 630px) {
+  .content {
+    width: 28rem;
+  }
+  .left {
+    width: 28rem;
+  }
+  #profile {
+    width: 10rem;
+    height: 10rem;
+  }
+  .contact {
+    margin-left: 12rem;
+    margin-top: 1rem;
+  }
+  .contact img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .contact p {
+    margin-left: 3rem;
+  }
+  .right {
+    width: 28rem;
+    margin-top: 3rem;
   }
 }
