@@ -90,6 +90,9 @@ p {
   .content {
     width: 75rem;
   }
+  .clear {
+    clear: both;
+  }
   .left {
     width: 75rem;
     margin: auto;
@@ -100,7 +103,7 @@ p {
   }
   .contact {
     margin-left: 52rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
   .right {
     width: 75rem;
