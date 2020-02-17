@@ -24,7 +24,8 @@ nav {
   margin: auto;
 }
 
-.align-right {
+.links {
+  display: none;
   float: right;
 }
 
@@ -44,8 +45,9 @@ a {
 
 section {
   display: flex;
-  margin-top: 100px;
-  font-size: 18px;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 section > div {
@@ -60,7 +62,7 @@ section > div {
   border-radius: 5px;
   display: block;
   margin: auto;
-  width: 300px;
+  width: 200px;
 }
 
 .picture {
@@ -70,7 +72,7 @@ section > div {
 .picture-border {
   animation: 1s picture-border-animation forwards;
   border: 3px solid #f8a;
-  height: 100%;
+  height: 266px;
   position: absolute;
   left: 0;
   right: 0;
@@ -80,8 +82,8 @@ section > div {
 .wrapper {
   line-height: 30px;
   text-align: justify;
-  margin: 0 50px;
-  padding: 0 25px;
+  padding: 0 5px;
+  margin-top: 20px;
 }
 
 .text-space-large {
@@ -111,6 +113,7 @@ section > div {
 
 .project {
   display: flex;
+  flex-direction: column;
 }
 
 .project-left {
@@ -144,6 +147,36 @@ footer section {
     border-color: #a6f;
     transform: translate(-15px, 15px);
     opacity: 0.8;
+  }
+}
+
+@media (min-width: 512px) {
+  .links {
+    display: block;
+  }
+  .wrapper {
+    margin: 0 50px;
+    margin-top: 40px;
+  }
+  .picture, .picture-border {
+    width: 300px;
+  }
+  .picture-border {
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+    margin-top: 100px;
+    font-size: 18px;
+  }
+  .wrapper {
+    margin-top: 0;
+  }
+  .project {
+    flex-direction: row;
   }
 }
 
