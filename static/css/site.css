@@ -1,199 +1,160 @@
+::selection {
+  background-color: #a6f4;
+}
+
 html {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
+  margin: 0;
 }
 
-.content {
-  width: 70rem;
+body {
+  margin: 0;
+}
+
+nav {
+  margin-top: 20px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.container {
+  padding: 0 15px;
   margin: auto;
-  margin-top: 5rem;
-  text-align: justify;
 }
 
-.left {
-  width: 20rem;
-  float: left;
-}
-
-#profile {
-  border-radius: 50%;
-  width: 15rem;
-  height: 15rem;
-  margin-top: 2rem;
-}
-
-#contactinfo {
-  width: 20rem;
-}
-
-.contact {
-  margin-top: 2rem;
-}
-
-.contact img {
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  float: left;
-}
-
-.contact p {
-  margin-left: 4rem;
-}
-
-.right {
-  width: 50rem;
+.align-right {
   float: right;
 }
 
+.brand > img {
+  height: 30px;
+}
+
 a {
-  color: #000;
+  color: #333;
   text-decoration: none;
 }
 
-a:hover {
-  color: #55f;
+.link {
+  color: #678;
+  padding-left: 20px;
+}
+
+section {
+  display: flex;
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+section > div {
+  flex: 1 1;
+}
+
+.picture-wrapper {
+  position: relative;
+}
+
+.picture, .picture-border {
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 300px;
+}
+
+.picture {
+  box-shadow: -6px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.picture-border {
+  animation: 1s picture-border-animation forwards;
+  border: 3px solid #f8a;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.wrapper {
+  line-height: 30px;
+  text-align: justify;
+  margin: 0 50px;
+  padding: 0 25px;
+}
+
+.text-space-large {
+  line-height: 35px;
+}
+
+.social-links img {
+  border-radius: 5px;
+  margin-right: 10px;
+  height: 35px;
+}
+
+.il {
+  display: inline-block;
+}
+
+.il img {
+  border-radius: 50%;
+  width: 30px;
+  vertical-align: text-bottom;
+}
+
+.projects-list {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project {
-  padding: 0.6rem;
-  background-color: #eee;
-  border-radius: 1rem;
+  display: flex;
 }
 
-.project img {
-  border-radius: 25%;
-  width: 4rem;
-  float: left;
+.project-left {
+  min-width: 300px;
 }
 
-.project h3 {
-  margin: 0;
-  margin-top: 0.4rem;
-  margin-left: 5rem;
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  height: 20px;
+  margin-bottom: 10px;
 }
 
-.project p {
-  margin: 0.2rem 0rem;
-  margin-left: 5rem;
+footer {
+  background-color: #eaeaea;
+  margin-top: 100px;
+  padding: 25px;
 }
 
-h1 {
-  font-size: 3rem;
+footer section {
+  margin-top: 0;
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 2rem;
-}
-
-@media screen and (max-width: 1150px) {
-  html {
-    font-size: 12px;
+@keyframes picture-border-animation {
+  0% {
+    border-color: #f8a;
+    opacity: 0;
   }
-  .clear {
-    clear: both;
-  }
-  .content {
-    width: 75rem;
-  }
-  #contactinfo {
-    float: right;
-    margin-right: 2rem;
-  }
-  .left {
-    width: 75rem;
-    margin: auto;
-    float: none;
-  }
-  #profile {
-    float: left;
-  }
-  .right {
-    width: 75rem;
-    margin: auto;
-    margin-top: 6rem;
-    float: none;
-    clear: both;
-  }
-  .project img {
-    width: 5rem;
-    height: 5rem;
-  }
-  .project h3 {
-    margin-left: 6rem;
-  }
-  .project p {
-    margin-left: 6rem;
-  }
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+  100% {
+    border-color: #a6f;
+    transform: translate(-15px, 15px);
+    opacity: 0.8;
   }
 }
 
-@media screen and (max-width: 960px) {
-  .content {
-    margin-top: 1rem;
-    width: 50rem;
-  }
-  .left {
-    width: 50rem;
-  }
-  .contact {
-    margin-top: 2.5rem;
-  }
-  .right {
-    width: 50rem;
-  }
-  .project img {
-    width: 4rem;
-    height: 4rem;
-  }
-  .project h3 {
-    line-height: 3.5rem;
-  }
-  .project p {
-    display: none;
+@media (min-width: 1000px) {
+  .container {
+    width: 900px;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .content {
-    width: 28rem;
-  }
-  .left {
-    width: 28rem;
-  }
-  #profile {
-    width: 10rem;
-    height: 10rem;
-  }
-  #contactinfo {
-    width: 15rem;
-  }
-  .contact {
-    margin-top: 1rem;
-  }
-  .contact img {
-    width: 2rem;
-    height: 2rem;
-  }
-  .contact p {
-    margin-left: 3rem;
-    font-size: 1.2rem;
-  }
-  .right {
-    width: 28rem;
-    margin-top: 3rem;
+@media (min-width: 1400px) {
+  .container {
+    width: 1100px;
   }
 }

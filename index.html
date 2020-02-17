@@ -1,81 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Kyle Lu - Software Developer</title>
   <meta charset="utf-8">
   <meta name="author" content="Kyle Lu">
-  <meta name="description" content="Hi! I'm Kyle, a hobbyist software developer working with a multitude of languages including C#, JavaScript, and Python.">
+  <meta name="description" content="I'm a software developer working with languages including C#, JavaScript, and Python, and frameworks like .NET, .NET Core, and NodeJS.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="static/favicon.ico">
   <link rel="stylesheet" type="text/css" href="static/css/site.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,400&amp;display=swap" rel="stylesheet">
   <script type="text/javascript" src="static/js/site.js"></script>
 </head>
 <body>
-  <div class="content">
-    <div class="left">
-      <img id="profile" src="static/media/me.jpg" alt="Picture of Me">
-      <br>
-      <div id="contactinfo">
-        <a href="mailto:sdbagel@gmail.com">
-          <div class="contact">
-            <img src="static/media/mail.png" alt="Email Me">
-            <p>sdbagel@gmail.com</p>
-          </div>
-        </a>
-        <a href="https://github.com/SDBagel">
-          <div class="contact">
-            <img src="static/media/github.png" alt="My GitHub">
-            <p>github.com/SDBagel</p>
-          </div>
-        </a>
-        <a href="https://linkedin.com/in/sdbagel">
-          <div class="contact">
-            <img src="static/media/linkedin.png" alt="My LinkedIn">
-            <p>linkedin.com/in/sdbagel</p>
-          </div>
-        </a>
+  <header>
+    <nav>
+      <div class="container">
+        <a class="brand">Kyle | SDBagel</a>
+        <div class="align-right">
+          <a class="link" href="#about">About</a>
+          <a class="link" href="#featured">Featured</a>
+          <a class="link" href="#posts">Posts</a>
+          <a class="link" href="#projects">Projects</a>
+        </div>
       </div>
-    </div>
-    <br class="clear">
-    <div class="right">
-      <h1>Kyle | SDBagel</h1>
-      <h2>Hobbyist Developer</h2>
-      <hr><br>
-      <p>Hi there! I'm Kyle, currently screwing around programming for fun and as a career option. I take interest in web and desktop development, sometimes including IoT and cloud technologies. My language of choice is C#, but I am also capable of writing basic Python, JavaScript and C++ as needed, and am familiar enough with concepts that I can just look up whatever I don't know. I'm constantly learning, and looking to have fun making software!</p>
-      <br>
-      <h2>Featured Work</h2>
-      <hr>
-      <a href="https://github.com/SDBagel/AnimateForms">
-        <div class="project">
-          <img src="static/media/github.png" alt="Project Icon">
-          <h3>AnimateForms</h3>
-          <p>Powerful and lightweight WinForms animation library.</p>
+    </nav>
+  </header>
+  <div class="container">
+    <a name="about"></a>
+    <section>
+      <div class="picture-wrapper">
+        <span class="picture-border"></span>
+        <img class="picture" src="static/media/alsome.jpg" alt="A picture of me.">
+      </div>
+      <div class="wrapper text-space-large">
+        <h1>Kyle | SDBagel</h1> 
+        <span class="social-links">
+          <a href="https://github.com/SDBagel" title="My GitHub">
+            <img src="static/media/github.png" alt="My GitHub"></a>
+          <a href="https://contra.live/profile/4789ac0e-3665-4df7-b982-1d650e92f8f3" title="My Contra Profile">
+            <img src="static/media/contra.png" alt="My Contra Profile"></a>
+          <a href="https://www.linkedin.com/in/sdbagel/" title="My LinkedIn">
+            <img src="static/media/linkedin.png"></a>
+          <a href="mailto:sdbagel@outlook.com" title="Email Me">
+            <img src="static/media/mail.png"></a>
+        </span>
+        <div>
+          <img src="static/badges/language-cs.svg">
+          <img src="static/badges/yolo.svg">
         </div>
-      </a>
-      <br>
-      <a href="https://github.com/SDBagel/SPADE-GUI">
+        <p>Hi! I'm a full stack developer, but I love frontend design and making quality user experiences. My typical projects range from very small to something I'll work on for months, and a few are built for other people under my name. Every project is a learning experience to get even better!</p>
+      </div>
+    </section>
+    <a name="featured"></a>
+    <section class="projects-list">
+      <div class="wrapper">
+        <h1>Featured Work</h1> 
+        <hr>
         <div class="project">
-          <img src="static/media/github.png" alt="Project Icon">
-          <h3>SPADE-GUI</h3>
-          <p>Graphical interface for NVIDIA SPADE, in ElectronJS.</p>
+          <div class="project-left">
+            <a href="https://github.com/SDBagel/AnimateForms" title="AnimateForms on GitHub" class="il">
+              <img src="static/media/github.png" alt="GitHub">
+              <h3 class="il">AnimateForms</h3>
+            </a>
+            <div class="flex-justify">
+              <img src="static/badges/language-cs.svg">
+              <a href="https://sdbagel.github.io/AnimateForms">
+                <img src="static/badges/docs-100%.svg">
+              </a>
+              <a href="https://travis-ci.com/SDBagel/AnimateForms">
+                <img src="https://img.shields.io/travis/com/SDBagel/AnimateForms.svg">
+              </a>
+            </div>
+            <div class="flex-justify">
+              <a href="https://www.nuget.org/packages/AnimateForms/">
+                <img src="https://img.shields.io/nuget/v/AnimateForms.svg">
+              </a>
+              <a href="https://www.nuget.org/packages/AnimateForms/">
+                <img src="https://img.shields.io/nuget/dt/AnimateForms.svg?label=nuget%20downloads">
+              </a>
+            </div>
+          </div>
+          <div class="project-right">
+            <p>AnimateForms is a versatile, customizable asynchronous animations library for Windows Forms built on the .NET Framework. I used AnimateForms in some of my other work. This is one of my favourite projects simply just because of how well-put-together it is, even if it's on an old platform.</p>
+          </div>
         </div>
-      </a>
-      <br>
-      <h2>Recent Projects</h2>
-      <hr>
-      <a href="https://github.com/SDBagel/RiemannMathProject">
+        <br>
         <div class="project">
-          <img src="static/media/github.png" alt="Project Icon">
-          <h3>RiemannWeb</h3>
-          <p>An online Riemann sum calculation tool for 2D objects in real life.</p>
+          <div class="project-left">
+            <a href="https://github.com/SDBagel/Contra" title="Contra on GitHub" class="il">
+              <img src="static/media/github.png" alt="GitHub">
+              <h3 class="il">Contra</h3>
+            </a>
+            <div class="flex-justify">
+              <img src="static/badges/language-cs.svg">
+              <img src="static/badges/docs-0%.svg">
+              <a href="https://travis-ci.com/SDBagel/Contra">
+                <img src="https://travis-ci.com/SDBagel/Contra.svg?branch=master">
+              </a>
+            </div>
+          </div>
+          <div class="project-right">
+            <p>Built for a student group at LAHS, Contra is a web app that provides a modern platform of community discussion as an alternative to limited existing organizations. Currently undocumented, but will be soon!</p>
+          </div>
         </div>
-      </a>
-      <br>
-      <h2>Updates</h2>
-      <hr>
-      <p>Class is starting which means less work gets done here. Meanwhile, check out <a href="https://github.com/SDBagel/AnimateForms">AnimateForms</a> on GitHub, or <a href="https://github.com/SDBagel">one of my other projects!</a></p>
-      <br>
-    </div>
+      </div>
+    </section>
+    <a name="posts"></a>
+    <section>
+      <div class="wrapper">
+        <h1>Recent Posts</h1> 
+        <hr>
+      </div>
+    </section>
+    <section class="wrapper">
+      <div>
+        Hey, something will appear here soon, but until then, you have this nice message. Have a nice day!
+      </div>
+    </section>
+    <a name="projects"></a>
+    <section class="projects-list">
+      <div class="wrapper">
+        <h1>Other Cool Projects</h1> 
+        <hr>
+        <div class="project">
+          <div class="project-left">
+            <a href="https://github.com/SDBagel/RiemannMathProject" title="RiemannWeb on GitHub" class="il">
+              <img src="static/media/github.png" alt="GitHub">
+              <h3 class="il">RiemannWeb</h3>
+            </a>
+            <div>
+              <img src="static/badges/language-cs.svg">
+              <a href="https://travis-ci.org/SDBagel/RiemannMathProject">
+                <img src="https://img.shields.io/travis/com/SDBagel/RiemannMathProject.svg">
+              </a>
+            </div>
+          </div>
+          <div class="project-right">
+            <p>RiemannWeb was a group math project where we could make any "product" to demonstrate our understanding. We chose Riemann Sums as our topic, and made a web app that can calculate the area of a drawn figure on a photo using Riemann sums. I was responsible for UI/UX and backend, as well as devops.</p>
+          </div>
+        </div>
+        <br>
+        <div class="project">
+          <div class="project-left">
+            <a href="https://github.com/SDBagel/SPADE-GUI" title="SPADE-GUI on GitHub" class="il">
+              <img src="static/media/github.png" alt="GitHub">
+              <h3 class="il">SPADE-GUI</h3>
+            </a>
+            <div>
+              <img src="static/badges/language-js.svg">
+            </div>
+          </div>
+          <div class="project-right">
+            <p>On ElectronJS for Linux, SPADE-GUI is a GUI wrapper for NVIDIA's SPADE neural network that generates photorealistic images from semantic labels. I wanted a quick and easy way to interact with SPADE while other websites were down, so I made this.</p>
+          </div>
+        </div>
+        <br>
+        <div class="project">
+          <div class="project-left">
+            <a href="https://github.com/SDBagel/WisdomDuck" title="WisdomDuck on GitHub" class="il">
+              <img src="static/media/github.png" alt="GitHub">
+              <h3 class="il">WisdomDuck</h3>
+            </a>
+            <div>
+              <img src="static/badges/language-cs.svg">
+            </div>
+          </div>
+          <div class="project-right">
+            <p>This was our final project for Los Altos Hacks IV, after some of our other fabulous ideas didn't really work out in time. It dispenses wisdom and it's a duck. You cannot ask for more.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
   </div>
+  <footer>
+    <div class="container">
+      <section>
+        <div>
+          <p>I built this site from scratch!</p>
+        </div>
+      </section>
+      <p>&copy; SDBagel 2020</p>
+    </div>
+  </footer>
 </body>
 </html>
