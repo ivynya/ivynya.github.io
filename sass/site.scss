@@ -1,0 +1,17 @@
+:root {
+  --bg-primary: #28323c;
+}
+
+::selection {
+  background-color: #c6f4;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
