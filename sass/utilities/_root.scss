@@ -1,22 +1,32 @@
 /* Root styles */
 
 :root {
-  --bg-primary: #28323c;
+  --bg-primary: #283242;
   --bg-secondary: #38425c;
+  --bg-standard: #000;
 
   --text-primary: #fff;
   
   --highlight-primary: #faf;
+
+  --shard-primary: #494ca0;
+  --shard-secondary: #292a47;
+  --shard-tertiary: #4b3d8f;
 }
 
 // Alternate sakura theme
-:root {
+[data-theme="sakura"] {
   --bg-primary: #fff;
   --bg-secondary: #fdf;
+  --bg-standard: #fff;
 
   --text-primary: #333;
   
   --highlight-primary: #faf;
+
+  --shard-primary: #fcf;
+  --shard-secondary: #faf;
+  --shard-tertiary: #f8f;
 }
 
 ::selection {

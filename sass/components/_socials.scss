@@ -2,6 +2,7 @@
 
 .socials {
   margin-top: 20px;
+  justify-content: center;
 
   a {
     border: 1px solid var(--text-primary);
@@ -13,15 +14,21 @@
     height: 25px;
     width: 25px;
     padding: 5px;
-    transition-duration: 0.1s;
+    transition-duration: 0.2s;
 
     &:not(:last-of-type) {
       margin-right: 10px;
     } 
 
-    &:hover {
+    &:hover, &:focus {
+      background-color: var(--highlight-primary);
       border-color: var(--highlight-primary);
-      color: var(--highlight-primary);
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
   }
 }

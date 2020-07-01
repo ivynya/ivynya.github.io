@@ -1,16 +1,24 @@
 /* Root styles */
 :root {
-  --bg-primary: #28323c;
+  --bg-primary: #283242;
   --bg-secondary: #38425c;
+  --bg-standard: #000;
   --text-primary: #fff;
   --highlight-primary: #faf;
+  --shard-primary: #494ca0;
+  --shard-secondary: #292a47;
+  --shard-tertiary: #4b3d8f;
 }
 
-:root {
+[data-theme=sakura] {
   --bg-primary: #fff;
   --bg-secondary: #fdf;
+  --bg-standard: #fff;
   --text-primary: #333;
   --highlight-primary: #faf;
+  --shard-primary: #fcf;
+  --shard-secondary: #faf;
+  --shard-tertiary: #f8f;
 }
 
 ::selection {
@@ -31,7 +39,7 @@
 
 /* Layout and typography */
 html {
-  font-family: "Nunito", sans-serif;
+  font-family: nunito, sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -82,7 +90,7 @@ main {
 }
 @keyframes fade-in-up {
   0% {
-    transform: translateY(40px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
@@ -97,9 +105,91 @@ main {
     background-position-y: 0;
   }
 }
+/* Shard - extensible & flexible cards */
+.shard {
+  background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
+  border-radius: 15px;
+  color: var(--text-primary);
+  display: block;
+  flex: 1 1;
+  height: 400px;
+  margin: auto;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.7s;
+}
+.shard:not(:last-of-type) {
+  margin-right: 25px;
+}
+.shard h3 {
+  background-image: linear-gradient(135deg, var(--shard-tertiary), var(--shard-secondary));
+  margin: 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Poiret One", nunito, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+}
+.shard .type {
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.shard .shard-nested {
+  background-color: var(--bg-standard);
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  width: 220px;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transform: scale(0.95);
+}
+.shard .shard-nested h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 28px;
+}
+.shard .shard-nested .desc {
+  line-height: 26px;
+}
+.shard:hover, .shard:focus {
+  box-shadow: var(--highlight-primary) 0 0 10px;
+  flex: 5 1;
+  transform: scale(1.05);
+  z-index: 10;
+}
+.shard:hover .shard-nested, .shard:focus .shard-nested {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
+.container:hover .shard {
+  filter: blur(2px);
+}
+
+.shard:hover {
+  filter: unset !important;
+}
+
 /* Social links */
 .socials {
   margin-top: 20px;
+  justify-content: center;
 }
 .socials a {
   border: 1px solid var(--text-primary);
@@ -111,16 +201,21 @@ main {
   height: 25px;
   width: 25px;
   padding: 5px;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
 }
 .socials a:not(:last-of-type) {
   margin-right: 10px;
 }
-.socials a:hover {
+.socials a:hover, .socials a:focus {
+  background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
-  color: var(--highlight-primary);
 }
 
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+  }
+}
 /* First section (About) */
 #about {
   display: flex;
@@ -166,7 +261,7 @@ main {
   margin: 0;
 }
 #about #bio p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   font-weight: lighter;
 }
@@ -178,6 +273,9 @@ main {
   #about #bio {
     text-align: left;
   }
+  #about #bio p {
+    font-size: 22px;
+  }
 }
 /* Second section (Featured) */
 #featured .waves-animation {
@@ -185,14 +283,14 @@ main {
   animation-delay: 0.6s;
   opacity: 0;
   overflow: hidden;
-  height: 200px;
+  height: 100px;
 }
 #featured .waves-animation svg {
   animation: bg-fade-in-up 1.5s forwards;
   background-image: url("../img/wave_pink.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 100px;
   width: 100%;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -208,9 +306,11 @@ main {
   text-align: center;
 }
 #featured .content h2 {
-  margin: 0;
-  text-decoration: underline;
-  text-decoration-color: var(--highlight-primary);
+  margin: auto;
+  margin-top: 0;
+  padding: 2px;
+  width: 200px;
+  border-bottom: 1px solid var(--text-primary);
 }
 
 /*# sourceMappingURL=site.css.map */
