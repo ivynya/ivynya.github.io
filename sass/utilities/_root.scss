@@ -1,0 +1,36 @@
+/* Root styles */
+
+:root {
+  --bg-primary: #28323c;
+  --bg-secondary: #38425c;
+
+  --text-primary: #fff;
+  
+  --highlight-primary: #faf;
+}
+
+// Alternate sakura theme
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #fdf;
+
+  --text-primary: #333;
+  
+  --highlight-primary: #faf;
+}
+
+::selection {
+  background-color: #0af4;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-primary);
+}

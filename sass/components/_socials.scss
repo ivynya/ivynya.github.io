@@ -1,0 +1,27 @@
+/* Social links */
+
+.socials {
+  margin-top: 20px;
+
+  a {
+    border: 1px solid var(--text-primary);
+    border-radius: 3px;
+    color: var(--text-primary);
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    transition-duration: 0.1s;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    } 
+
+    &:hover {
+      border-color: var(--highlight-primary);
+      color: var(--highlight-primary);
+    }
+  }
+}

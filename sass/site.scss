@@ -1,17 +1,9 @@
-:root {
-  --bg-primary: #28323c;
-}
 
-::selection {
-  background-color: #c6f4;
-}
+@import 'utilities/root';
+@import 'utilities/layout';
+@import 'utilities/animations';
 
-html {
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
+@import 'components/socials';
 
-body {
-  margin: 0;
-}
+@import 'sections/about';
+@import 'sections/featured';

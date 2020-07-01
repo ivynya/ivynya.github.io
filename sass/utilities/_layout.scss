@@ -1,0 +1,41 @@
+/* Layout and typography */
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+main {
+  padding-top: 50px;
+}
+
+.flex-smart {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 768px;
+  margin: auto;
+}
