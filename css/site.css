@@ -111,10 +111,10 @@ main {
 }
 @keyframes floating {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-35px);
+    transform: translateY(-20px);
   }
 }
 /* Shard - extensible & flexible cards */
@@ -176,10 +176,15 @@ main {
   white-space: nowrap;
 }
 .shard img {
+  animation: floating 3s infinite alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
   position: absolute;
   left: 60px;
+  top: 0;
+  bottom: 30px;
+  margin: auto;
   width: 120px;
-  transition-duration: 0.7s;
 }
 .shard .shard-nested {
   background-color: var(--bg-standard);
@@ -212,16 +217,7 @@ main {
   z-index: 10;
 }
 .shard:hover img, .shard:focus img {
-  animation: floating 3s infinite alternate;
-  animation-delay: 0.7s;
-  transform: translateY(-20px);
-}
-.shard:hover img:after, .shard:focus img:after {
-  display: block;
-  content: "";
-  box-shadow: #aaa 0 0 10px;
-  width: 200px;
-  height: 1px;
+  animation-play-state: running;
 }
 .shard:hover .shard-nested, .shard:focus .shard-nested {
   opacity: 1;

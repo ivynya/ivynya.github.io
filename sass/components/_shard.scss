@@ -44,10 +44,17 @@
   }
 
   img {
+    // This animation jank is a result of CSS
+    // not having amazing interop for transitions & animations
+    animation: floating 3s infinite alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
     position: absolute;
     left: 60px;
+    top: 0;
+    bottom: 30px;
+    margin: auto;
     width: 120px;
-    transition-duration: 0.7s;
   }
 
   .shard-nested {
@@ -84,17 +91,7 @@
     z-index: 10;
 
     img {
-      animation: floating 3s infinite alternate;
-      animation-delay: 0.7s;
-      transform: translateY(-20px);
-
-      &:after {
-        display: block;
-        content: "";
-        box-shadow: #aaa 0 0 10px;
-        width: 200px;
-        height: 1px;
-      }
+      animation-play-state: running;
     }
 
     .shard-nested {
