@@ -58,6 +58,11 @@ main {
   height: 100%;
 }
 
+footer {
+  border-top: var(--highlight-primary) 1px solid;
+  padding: 30px 0;
+}
+
 .flex-smart {
   display: flex;
   flex-direction: column;
@@ -114,9 +119,53 @@ main {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 }
+/* CSS tooltips for :hover */
+[data-tt] {
+  position: relative;
+  /* Positioning and visibility */
+  /* Dynamic-width tooltip */
+}
+[data-tt]:before {
+  border: var(--highlight-primary) 1px solid;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  top: auto;
+  left: 50%;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.15s;
+  will-change: transform;
+}
+[data-tt]:before {
+  background-color: var(--bg-standard);
+  color: var(--text-primary);
+  content: attr(data-tt);
+  padding: 8px 12px;
+  line-height: 18px;
+  height: 18px;
+  width: max-content;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+[data-tt]:hover {
+  /* Tooltip becomes visible on hover */
+  /* Scale & arrow slide effects */
+}
+[data-tt]:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+[data-tt]:hover:before {
+  transform: translateY(-50%, -5px);
+}
+
 /* Shard - extensible & flexible cards */
 /* Shard style overrides */
 .shard-turbo {
@@ -176,7 +225,7 @@ main {
   white-space: nowrap;
 }
 .shard img {
-  animation: floating 3s infinite alternate;
+  animation: 3s ease-in-out infinite alternate floating;
   animation-fill-mode: forwards;
   animation-play-state: paused;
   position: absolute;
@@ -275,6 +324,7 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 55vh;
 }
 #about #pfp {

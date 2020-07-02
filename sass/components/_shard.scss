@@ -46,7 +46,7 @@
   img {
     // This animation jank is a result of CSS
     // not having amazing interop for transitions & animations
-    animation: floating 3s infinite alternate;
+    animation: 3s ease-in-out infinite alternate floating;
     animation-fill-mode: forwards;
     animation-play-state: paused;
     position: absolute;
