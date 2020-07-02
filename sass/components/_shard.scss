@@ -78,6 +78,7 @@
 
   &:hover, &:focus {
     box-shadow: var(--highlight-primary) 0 0 10px;
+    outline: none;
     flex: 5 1;
     transform: scale(1.05);
     z-index: 10;

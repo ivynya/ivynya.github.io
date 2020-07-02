@@ -33,9 +33,7 @@
     h2 {
       margin: auto;
       margin-top: 0;
-      padding: 2px;
       width: 200px;
-      border-bottom: 1px solid var(--text-primary);
     }
 
     @for $i from 0 through 2 {

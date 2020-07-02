@@ -53,6 +53,9 @@ body {
 
 main {
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .flex-smart {
@@ -203,6 +206,7 @@ main {
 }
 .shard:hover, .shard:focus {
   box-shadow: var(--highlight-primary) 0 0 10px;
+  outline: none;
   flex: 5 1;
   transform: scale(1.05);
   z-index: 10;
@@ -264,6 +268,12 @@ main {
     justify-content: flex-start;
   }
 }
+/* Shared section stylings */
+section h2 {
+  padding: 2px;
+  border-bottom: 1px solid var(--text-primary);
+}
+
 /* First section (About) */
 #about {
   display: flex;
@@ -356,9 +366,7 @@ main {
 #featured .content h2 {
   margin: auto;
   margin-top: 0;
-  padding: 2px;
   width: 200px;
-  border-bottom: 1px solid var(--text-primary);
 }
 #featured .content > div > :nth-child(1) {
   animation: fade-in 1s forwards;
