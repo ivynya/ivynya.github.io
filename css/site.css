@@ -1,7 +1,7 @@
 /* Root styles */
 :root {
   --bg-primary: #182235;
-  --bg-secondary: #353955;
+  --bg-secondary: #302f65;
   --bg-standard: #000;
   --text-primary: #fff;
   --highlight-primary: #faf;
@@ -18,7 +18,7 @@
   --text-primary: #333;
   --highlight-primary: #faf;
   --shard-primary: #fcf;
-  --shard-secondary: #faf;
+  --shard-secondary: #caf;
   --shard-tertiary: #f8f;
 }
 
@@ -106,12 +106,40 @@ main {
     background-position-y: 0;
   }
 }
+@keyframes floating {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(-35px);
+  }
+}
 /* Shard - extensible & flexible cards */
+/* Shard style overrides */
+.shard-turbo {
+  --shard-primary: #f8a;
+  --shard-secondary: #ea7;
+  --shard-tertiary: #f88;
+}
+
+.shard-integration {
+  --shard-primary: #a8f;
+  --shard-secondary: #c8a;
+  --shard-tertiary: #f8f;
+}
+
+.shard-animate {
+  --shard-primary: #8af;
+  --shard-secondary: #c8f;
+  --shard-tertiary: #7ae;
+}
+
 .shard {
   background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
   border-radius: 15px;
-  color: var(--text-primary);
-  display: block;
+  color: #fff;
+  display: flex;
+  align-items: center;
   flex: 1 1;
   height: 400px;
   margin: auto;
@@ -144,9 +172,16 @@ main {
   font-size: 12px;
   white-space: nowrap;
 }
+.shard img {
+  position: absolute;
+  left: 60px;
+  width: 120px;
+  transition-duration: 0.7s;
+}
 .shard .shard-nested {
   background-color: var(--bg-standard);
   border-radius: 5px;
+  color: var(--text-primary);
   padding: 20px;
   position: absolute;
   right: 20px;
@@ -171,6 +206,18 @@ main {
   flex: 5 1;
   transform: scale(1.05);
   z-index: 10;
+}
+.shard:hover img, .shard:focus img {
+  animation: floating 3s infinite alternate;
+  animation-delay: 0.7s;
+  transform: translateY(-20px);
+}
+.shard:hover img:after, .shard:focus img:after {
+  display: block;
+  content: "";
+  box-shadow: #aaa 0 0 10px;
+  width: 200px;
+  height: 1px;
 }
 .shard:hover .shard-nested, .shard:focus .shard-nested {
   opacity: 1;
@@ -327,6 +374,11 @@ main {
   animation: fade-in 1s forwards;
   animation-delay: 700ms;
   opacity: 0;
+}
+
+/* Third section (All projects) */
+#projects {
+  min-height: 60vh;
 }
 
 /*# sourceMappingURL=site.css.map */

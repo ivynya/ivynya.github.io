@@ -1,10 +1,12 @@
 /* Shard - extensible & flexible cards */
+@import './shards';
 
 .shard {
   background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
   border-radius: 15px;
-  color: var(--text-primary);
-  display: block;
+  color: #fff;
+  display: flex;
+  align-items: center;
   flex: 1 1;
   height: 400px;
   margin: auto;
@@ -41,9 +43,17 @@
     white-space: nowrap;
   }
 
+  img {
+    position: absolute;
+    left: 60px;
+    width: 120px;
+    transition-duration: 0.7s;
+  }
+
   .shard-nested {
     background-color: var(--bg-standard);
     border-radius: 5px;
+    color: var(--text-primary);
     padding: 20px;
     position: absolute;
     right: 20px;
@@ -71,6 +81,20 @@
     flex: 5 1;
     transform: scale(1.05);
     z-index: 10;
+
+    img {
+      animation: floating 3s infinite alternate;
+      animation-delay: 0.7s;
+      transform: translateY(-20px);
+
+      &:after {
+        display: block;
+        content: "";
+        box-shadow: #aaa 0 0 10px;
+        width: 200px;
+        height: 1px;
+      }
+    }
 
     .shard-nested {
       opacity: 1;

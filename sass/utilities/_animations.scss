@@ -27,3 +27,12 @@
     background-position-y: 0;
   }
 }
+
+@keyframes floating {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(-35px);
+  }
+}
