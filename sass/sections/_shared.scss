@@ -1,8 +1,46 @@
 /* Shared section stylings */
 
 section {
+  padding-bottom: 100px;
+
   h2 {
+    margin-top: 0;
     padding: 2px;
     border-bottom: 1px solid var(--text-primary);
+    width: max-content;
+  }
+}
+
+// Reusable details section
+
+.section-details {
+  .desc {
+    width: 190px;
+    text-align: left;
+    line-height: 24px;
+  }
+
+  .content {
+    flex: 1 1;
+  }
+
+  @media (min-width: 768px) {
+    .desc {
+      padding-right: 60px;
+    }
+  }
+}
+
+.section-details-flipped {
+  @media (min-width: 768px) {
+    .desc {
+      padding-right: 0;
+      padding-left: 60px;
+      text-align: right;
+    }
+
+    .container {
+      flex-direction: row-reverse;
+    }
   }
 }

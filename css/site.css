@@ -58,9 +58,16 @@ main {
   height: 100%;
 }
 
-footer {
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer {
   border-top: var(--highlight-primary) 1px solid;
-  padding: 30px 0;
+  margin-top: 60px;
+  padding: 30px 20px;
 }
 
 .flex-smart {
@@ -81,11 +88,6 @@ footer {
 .flex-column {
   display: flex;
   flex-direction: column;
-}
-
-.container {
-  max-width: 768px;
-  margin: auto;
 }
 
 /* CSS Animations */
@@ -160,6 +162,57 @@ footer {
   opacity: 1;
   /* Scale & arrow slide effects */
   transform: translateY(-50%, -5px);
+}
+
+/* Contact form */
+.contact-form input, .contact-form textarea {
+  background-color: transparent;
+  border: var(--highlight-primary) 1px solid;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 12px;
+  margin-bottom: 25px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: var(--text-primary);
+}
+
+/* Fractals - icon-less compact cards */
+.fractal {
+  border: var(--bg-secondary) 3px solid;
+  border-radius: 5px;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition-duration: 0.2s;
+}
+.fractal .fractal-title {
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+.fractal h3, .fractal p {
+  margin: 0;
+}
+.fractal .fractal-sublink {
+  border: var(--highlight-primary) 1px solid;
+  border-radius: 3px;
+  color: var(--text-primary);
+  padding: 5px;
+  line-height: 18px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  justify-self: flex-end;
+}
+.fractal .fractal-sublink:first-of-type {
+  margin-left: auto;
+}
+.fractal .fractal-sublink:not(:last-of-type) {
+  margin-right: 5px;
+}
+.fractal .fractal-sublink:hover, .fractal .fractal-sublink:focus {
+  background-color: var(--highlight-primary);
 }
 
 /* Shard - extensible & flexible cards */
@@ -320,9 +373,39 @@ footer {
   }
 }
 /* Shared section stylings */
+section {
+  padding-bottom: 100px;
+}
 section h2 {
+  margin-top: 0;
   padding: 2px;
   border-bottom: 1px solid var(--text-primary);
+  width: max-content;
+}
+
+.section-details .desc {
+  width: 190px;
+  text-align: left;
+  line-height: 24px;
+}
+.section-details .content {
+  flex: 1 1;
+}
+@media (min-width: 768px) {
+  .section-details .desc {
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-details-flipped .desc {
+    padding-right: 0;
+    padding-left: 60px;
+    text-align: right;
+  }
+  .section-details-flipped .container {
+    flex-direction: row-reverse;
+  }
 }
 
 /* First section (About) */
@@ -411,14 +494,12 @@ section h2 {
   animation-delay: 0.3s;
   opacity: 0;
   background-image: linear-gradient(var(--bg-secondary) 20%, transparent);
-  min-height: 50vh;
   padding: 20px 0;
   text-align: center;
 }
 #featured .content h2 {
   margin: auto;
   margin-top: 0;
-  width: 200px;
 }
 #featured .content > div > :nth-child(1) {
   animation: fade-in 1s forwards;
@@ -434,11 +515,6 @@ section h2 {
   animation: fade-in 1s forwards;
   animation-delay: 700ms;
   opacity: 0;
-}
-
-/* Third section (All projects) */
-#projects {
-  min-height: 60vh;
 }
 
 /*# sourceMappingURL=site.css.map */

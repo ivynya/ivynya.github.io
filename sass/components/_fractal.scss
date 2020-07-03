@@ -1,0 +1,43 @@
+/* Fractals - icon-less compact cards */
+
+.fractal {
+  border: var(--bg-secondary) 3px solid;
+  border-radius: 5px;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition-duration: 0.2s;
+
+  .fractal-title {
+    margin-bottom: 10px;
+    line-height: 30px;
+  }
+
+  h3, p {
+    margin: 0;
+  }
+
+  .fractal-sublink {
+    border: var(--highlight-primary) 1px solid;
+    border-radius: 3px;
+    color: var(--text-primary);
+    padding: 5px;
+    line-height: 18px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    justify-self: flex-end;
+
+    &:first-of-type {
+      margin-left: auto;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
+
+    &:hover, &:focus {
+      background-color: var(--highlight-primary);
+    }
+  }
+}

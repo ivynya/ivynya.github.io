@@ -1,0 +1,17 @@
+/* Contact form */
+
+.contact-form {
+  input, textarea {
+    background-color: transparent;
+    border: var(--highlight-primary) 1px solid;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px 12px;
+    margin-bottom: 25px;
+
+    &::placeholder {
+      color: var(--text-primary);
+    }
+  }
+}

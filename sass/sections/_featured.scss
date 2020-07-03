@@ -26,14 +26,12 @@
     animation-delay: 0.3s;
     opacity: 0;
     background-image: linear-gradient(var(--bg-secondary) 20%, transparent);
-    min-height: 50vh;
     padding: 20px 0;
     text-align: center;
 
     h2 {
       margin: auto;
       margin-top: 0;
-      width: 200px;
     }
 
     @for $i from 0 through 2 {
