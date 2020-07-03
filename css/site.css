@@ -167,25 +167,6 @@ footer {
 }
 
 /* Shard - extensible & flexible cards */
-/* Shard style overrides */
-.shard-turbo {
-  --shard-primary: #f8a;
-  --shard-secondary: #ea7;
-  --shard-tertiary: #f88;
-}
-
-.shard-integration {
-  --shard-primary: #a8f;
-  --shard-secondary: #c8a;
-  --shard-tertiary: #f8f;
-}
-
-.shard-animate {
-  --shard-primary: #8af;
-  --shard-secondary: #c8f;
-  --shard-tertiary: #7ae;
-}
-
 .shard {
   background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
   border-radius: 15px;
@@ -281,6 +262,30 @@ footer {
 
 .shard:hover {
   filter: unset !important;
+}
+
+/* Shard style overrides */
+.shard-turbo {
+  --shard-primary: #f8a;
+  --shard-secondary: #ea7;
+  --shard-tertiary: #f88;
+}
+
+.shard-integration {
+  --shard-primary: #a8f;
+  --shard-secondary: #c8a;
+  --shard-tertiary: #f8f;
+}
+.shard-integration img {
+  left: 20px;
+  bottom: 15px;
+  width: 200px;
+}
+
+.shard-animate {
+  --shard-primary: #8af;
+  --shard-secondary: #c8f;
+  --shard-tertiary: #7ae;
 }
 
 /* Social links */

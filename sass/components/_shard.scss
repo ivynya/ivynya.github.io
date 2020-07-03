@@ -1,5 +1,4 @@
 /* Shard - extensible & flexible cards */
-@import './shards';
 
 .shard {
   background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
@@ -111,3 +110,5 @@
 .shard:hover {
   filter: unset !important;
 }
+
+@import './shards';
