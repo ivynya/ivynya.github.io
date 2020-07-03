@@ -154,15 +154,11 @@ footer {
   text-align: center;
   transform: translate(-50%, 0);
 }
-[data-tt]:hover {
+[data-tt]:hover:before, [data-tt]:focus:before {
   /* Tooltip becomes visible on hover */
-  /* Scale & arrow slide effects */
-}
-[data-tt]:hover:before {
   visibility: visible;
   opacity: 1;
-}
-[data-tt]:hover:before {
+  /* Scale & arrow slide effects */
   transform: translateY(-50%, -5px);
 }
 
@@ -277,15 +273,20 @@ footer {
   --shard-tertiary: #f8f;
 }
 .shard-integration img {
-  left: 20px;
+  left: 30px;
   bottom: 15px;
-  width: 200px;
+  width: 180px;
 }
 
 .shard-animate {
   --shard-primary: #8af;
   --shard-secondary: #c8f;
   --shard-tertiary: #7ae;
+}
+.shard-animate img {
+  left: 50px;
+  bottom: 0;
+  width: 140px;
 }
 
 /* Social links */

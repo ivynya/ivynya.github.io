@@ -33,14 +33,13 @@
     transform: translate(-50%, 0);
   }
 
-  &:hover {
-    /* Tooltip becomes visible on hover */
+  &:hover, &:focus {
     &:before {
+      /* Tooltip becomes visible on hover */
       visibility: visible;
       opacity: 1;
-    }
-    /* Scale & arrow slide effects */
-    &:before {
+
+      /* Scale & arrow slide effects */
       transform: translateY(-50%, -5px);
     }
   }
