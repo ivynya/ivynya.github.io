@@ -11,10 +11,12 @@
   --shard-secondary: #c8a;
   --shard-tertiary: #f8f;
 
-  img {
-    left: 30px;
-    bottom: 15px;
-    width: 180px;
+  @media (min-width: 768px) {
+    img {
+      left: 30px;
+      bottom: 15px;
+      width: 180px;
+    }
   }
 }
 
@@ -23,9 +25,11 @@
   --shard-secondary: #c8f;
   --shard-tertiary: #7ae;
 
-  img {
-    left: 50px;
-    bottom: 0;
-    width: 140px;
+  @media (min-width: 768px) {
+    img {
+      left: 50px;
+      bottom: 0;
+      width: 140px;
+    }
   }
 }

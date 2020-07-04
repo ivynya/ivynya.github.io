@@ -1,9 +1,4 @@
 
-@import 'utilities/root';
-@import 'utilities/layout';
-@import 'utilities/animations';
-@import 'utilities/tooltips';
-
 @import 'components/contact';
 @import 'components/fractal';
 @import 'components/shard';
@@ -12,3 +7,9 @@
 @import 'sections/shared';
 @import 'sections/about';
 @import 'sections/featured';
+
+@import 'utilities/root';
+@import 'utilities/typography';
+@import 'utilities/layout';
+@import 'utilities/animations';
+@import 'utilities/tooltips';

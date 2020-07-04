@@ -1,3 +1,392 @@
+/* Contact form */
+.contact-form input, .contact-form textarea {
+  background-color: transparent;
+  border: var(--highlight-primary) 1px solid;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 12px;
+  margin-bottom: 25px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: var(--text-primary);
+}
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Fractals - icon-less compact cards */
+.fractal {
+  border: var(--bg-secondary) 3px solid;
+  border-radius: 5px;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition-duration: 0.2s;
+}
+.fractal .fractal-title {
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+.fractal h3, .fractal p {
+  margin: 0;
+}
+.fractal .fractal-sublink {
+  justify-self: flex-end;
+}
+.fractal .fractal-sublink:first-of-type {
+  margin-left: auto;
+}
+
+/* Shard - extensible & flexible cards */
+.shard {
+  background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  width: 280px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.7s;
+}
+.shard h3 {
+  background-image: linear-gradient(135deg, var(--shard-tertiary), var(--shard-secondary));
+  margin: 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Poiret One", nunito, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
+}
+.shard .type {
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.shard img {
+  animation: 3s ease-in-out infinite alternate floating;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 30px;
+  margin: auto;
+  height: 200px;
+}
+.shard .shard-nested {
+  background-color: var(--bg-standard);
+  border-radius: 10px;
+  color: var(--text-primary);
+  padding: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 220px;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transform: scale(0.95);
+}
+.shard .shard-nested h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 28px;
+}
+.shard .shard-nested .desc {
+  line-height: 26px;
+}
+.shard .shard-nested .links {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  white-space: nowrap;
+  transform: translateY(50px) scale(0.9);
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+}
+.shard .shard-nested a {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+.shard:hover, .shard:focus, .shard:focus-within {
+  box-shadow: var(--highlight-primary) 0 0 10px;
+  outline: none;
+}
+.shard:hover img, .shard:focus img, .shard:focus-within img {
+  animation-play-state: running;
+}
+.shard:hover .shard-nested, .shard:focus .shard-nested, .shard:focus-within .shard-nested {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transform: scale(1);
+}
+.shard:hover .shard-nested .links, .shard:focus .shard-nested .links, .shard:focus-within .shard-nested .links {
+  transform: translateY(0) scale(1);
+}
+
+@media (min-width: 768px) {
+  .container:hover .shard {
+    filter: blur(1px);
+  }
+
+  .shard {
+    flex: 1 1;
+  }
+  .shard img {
+    left: 60px;
+    right: unset;
+  }
+  .shard:not(:last-of-type) {
+    margin-right: 25px;
+  }
+  .shard .shard-nested {
+    transition-delay: 0.2s;
+  }
+  .shard:hover, .shard:focus, .shard:focus-within {
+    filter: unset !important;
+    flex: 5 1;
+    transform: scale(1.05);
+  }
+}
+/* Shard style overrides */
+.shard-turbo {
+  --shard-primary: #f8a;
+  --shard-secondary: #ea7;
+  --shard-tertiary: #f88;
+}
+
+.shard-integration {
+  --shard-primary: #a8f;
+  --shard-secondary: #c8a;
+  --shard-tertiary: #f8f;
+}
+@media (min-width: 768px) {
+  .shard-integration img {
+    left: 30px;
+    bottom: 15px;
+    width: 180px;
+  }
+}
+
+.shard-animate {
+  --shard-primary: #8af;
+  --shard-secondary: #c8f;
+  --shard-tertiary: #7ae;
+}
+@media (min-width: 768px) {
+  .shard-animate img {
+    left: 50px;
+    bottom: 0;
+    width: 140px;
+  }
+}
+
+/* Social links */
+.socials {
+  margin-top: 20px;
+  justify-content: center;
+}
+.socials a {
+  border: 1px solid var(--text-primary);
+  border-radius: 3px;
+  color: var(--text-primary);
+  text-align: center;
+  text-decoration: none;
+  line-height: 25px;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  transition-duration: 0.2s;
+}
+.socials a:not(:last-of-type) {
+  margin-right: 10px;
+}
+.socials a:hover, .socials a:focus {
+  background-color: var(--highlight-secondary);
+  border-color: var(--highlight-primary);
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+  }
+}
+/* Shared section stylings */
+section {
+  padding-bottom: 100px;
+}
+section h2 {
+  margin: auto;
+  margin-top: 0;
+  padding: 2px;
+  border-bottom: 1px solid var(--text-primary);
+  width: max-content;
+}
+
+.section-details .desc {
+  text-align: center;
+  line-height: 24px;
+}
+.section-details .content {
+  flex: 1 1;
+}
+
+@media (min-width: 768px) {
+  section h2 {
+    margin: 0;
+  }
+
+  .section-details .desc {
+    width: 190px;
+    text-align: left;
+    padding-right: 60px;
+  }
+
+  .section-details-flipped .desc {
+    padding-right: 0;
+    padding-left: 60px;
+    text-align: right;
+  }
+  .section-details-flipped .container {
+    flex-direction: row-reverse;
+  }
+}
+/* First section (About) */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+}
+#about #pfp {
+  border-radius: 50%;
+  width: 260px;
+  margin: auto;
+  transition-duration: 0.5s;
+}
+#about #pfp:hover {
+  box-shadow: var(--highlight-primary) 0 0 20px;
+}
+#about #bio {
+  margin-top: 20px;
+  text-align: center;
+}
+#about #bio :nth-child(2) {
+  animation: fade-in 1.5s forwards;
+  animation-delay: 0ms;
+  opacity: 0;
+}
+#about #bio :nth-child(3) {
+  animation: fade-in 1.5s forwards;
+  animation-delay: 200ms;
+  opacity: 0;
+}
+#about #bio :nth-child(4) {
+  animation: fade-in 1.5s forwards;
+  animation-delay: 400ms;
+  opacity: 0;
+}
+#about #bio :nth-child(5) {
+  animation: fade-in 1.5s forwards;
+  animation-delay: 600ms;
+  opacity: 0;
+}
+#about #bio h1 {
+  font-size: 42px;
+  font-weight: normal;
+  margin: 0;
+}
+#about #bio p {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+  #about #pfp {
+    margin-right: 80px;
+  }
+  #about #bio {
+    margin-top: 0;
+    text-align: left;
+  }
+  #about #bio p {
+    font-size: 22px;
+  }
+}
+/* Second section (Featured) */
+#featured .waves-animation {
+  animation: fade-in-up 1s forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  overflow: hidden;
+  height: 50px;
+}
+#featured .waves-animation svg {
+  animation: bg-fade-in-up 1.5s forwards;
+  background-image: url("../img/wave_pink.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  fill: var(--bg-secondary);
+}
+#featured .content {
+  animation: fade-in-up 1s forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  background-image: linear-gradient(var(--bg-secondary) 20%, transparent);
+  padding: 20px 0;
+  text-align: center;
+}
+#featured .content h2 {
+  margin: auto;
+  margin-top: 0;
+}
+#featured .content > div > :nth-child(1) {
+  animation: fade-in 1s forwards;
+  animation-delay: 500ms;
+  opacity: 0;
+}
+#featured .content > div > :nth-child(2) {
+  animation: fade-in 1s forwards;
+  animation-delay: 600ms;
+  opacity: 0;
+}
+#featured .content > div > :nth-child(3) {
+  animation: fade-in 1s forwards;
+  animation-delay: 700ms;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  #featured .waves-animation {
+    height: 150px;
+  }
+  #featured .waves-animation svg {
+    height: 150px;
+  }
+}
 /* Root styles */
 :root {
   --bg-primary: #182235;
@@ -36,6 +425,27 @@
 
 ::-webkit-scrollbar-thumb {
   background: var(--highlight-primary);
+}
+
+/* Shared typography */
+a {
+  color: var(--highlight-secondary);
+}
+
+a.button {
+  border: var(--highlight-primary) 1px solid;
+  border-radius: 3px;
+  color: var(--text-primary);
+  padding: 5px 10px;
+  line-height: 18px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+a.button:not(:last-of-type) {
+  margin-right: 5px;
+}
+a.button:hover, a.button:focus {
+  background-color: var(--highlight-primary);
 }
 
 /* Layout and typography */
@@ -162,359 +572,6 @@ main {
   opacity: 1;
   /* Scale & arrow slide effects */
   transform: translateY(-50%, -5px);
-}
-
-/* Contact form */
-.contact-form input, .contact-form textarea {
-  background-color: transparent;
-  border: var(--highlight-primary) 1px solid;
-  color: var(--text-primary);
-  font-family: inherit;
-  font-size: 16px;
-  padding: 10px 12px;
-  margin-bottom: 25px;
-}
-.contact-form input::placeholder, .contact-form textarea::placeholder {
-  color: var(--text-primary);
-}
-
-/* Fractals - icon-less compact cards */
-.fractal {
-  border: var(--bg-secondary) 3px solid;
-  border-radius: 5px;
-  color: var(--text-primary);
-  text-decoration: none;
-  margin-bottom: 20px;
-  padding: 20px;
-  transition-duration: 0.2s;
-}
-.fractal .fractal-title {
-  margin-bottom: 10px;
-  line-height: 30px;
-}
-.fractal h3, .fractal p {
-  margin: 0;
-}
-.fractal .fractal-sublink {
-  border: var(--highlight-primary) 1px solid;
-  border-radius: 3px;
-  color: var(--text-primary);
-  padding: 5px;
-  line-height: 18px;
-  text-decoration: none;
-  transition-duration: 0.2s;
-  justify-self: flex-end;
-}
-.fractal .fractal-sublink:first-of-type {
-  margin-left: auto;
-}
-.fractal .fractal-sublink:not(:last-of-type) {
-  margin-right: 5px;
-}
-.fractal .fractal-sublink:hover, .fractal .fractal-sublink:focus {
-  background-color: var(--highlight-primary);
-}
-
-/* Shard - extensible & flexible cards */
-.shard {
-  background-image: linear-gradient(135deg, var(--shard-primary), var(--shard-secondary));
-  border-radius: 15px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  flex: 1 1;
-  height: 400px;
-  margin: auto;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  transition-duration: 0.7s;
-}
-.shard:not(:last-of-type) {
-  margin-right: 25px;
-}
-.shard h3 {
-  background-image: linear-gradient(135deg, var(--shard-tertiary), var(--shard-secondary));
-  margin: 0;
-  padding: 15px 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-family: "Poiret One", nunito, sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 28px;
-}
-.shard .type {
-  margin: 0;
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-size: 12px;
-  white-space: nowrap;
-}
-.shard img {
-  animation: 3s ease-in-out infinite alternate floating;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-  position: absolute;
-  left: 60px;
-  top: 0;
-  bottom: 30px;
-  margin: auto;
-  width: 120px;
-}
-.shard .shard-nested {
-  background-color: var(--bg-standard);
-  border-radius: 5px;
-  color: var(--text-primary);
-  padding: 20px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  bottom: 20px;
-  width: 220px;
-  overflow: hidden;
-  opacity: 0;
-  transition-duration: 0.2s;
-  transform: scale(0.95);
-}
-.shard .shard-nested h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  font-size: 28px;
-}
-.shard .shard-nested .desc {
-  line-height: 26px;
-}
-.shard:hover, .shard:focus {
-  box-shadow: var(--highlight-primary) 0 0 10px;
-  outline: none;
-  flex: 5 1;
-  transform: scale(1.05);
-  z-index: 10;
-}
-.shard:hover img, .shard:focus img {
-  animation-play-state: running;
-}
-.shard:hover .shard-nested, .shard:focus .shard-nested {
-  opacity: 1;
-  transition-duration: 0.5s;
-  transition-delay: 0.2s;
-  transform: scale(1);
-}
-
-.container:hover .shard {
-  filter: blur(1px);
-}
-
-.shard:hover {
-  filter: unset !important;
-}
-
-/* Shard style overrides */
-.shard-turbo {
-  --shard-primary: #f8a;
-  --shard-secondary: #ea7;
-  --shard-tertiary: #f88;
-}
-
-.shard-integration {
-  --shard-primary: #a8f;
-  --shard-secondary: #c8a;
-  --shard-tertiary: #f8f;
-}
-.shard-integration img {
-  left: 30px;
-  bottom: 15px;
-  width: 180px;
-}
-
-.shard-animate {
-  --shard-primary: #8af;
-  --shard-secondary: #c8f;
-  --shard-tertiary: #7ae;
-}
-.shard-animate img {
-  left: 50px;
-  bottom: 0;
-  width: 140px;
-}
-
-/* Social links */
-.socials {
-  margin-top: 20px;
-  justify-content: center;
-}
-.socials a {
-  border: 1px solid var(--text-primary);
-  border-radius: 3px;
-  color: var(--text-primary);
-  text-align: center;
-  text-decoration: none;
-  line-height: 25px;
-  height: 25px;
-  width: 25px;
-  padding: 5px;
-  transition-duration: 0.2s;
-}
-.socials a:not(:last-of-type) {
-  margin-right: 10px;
-}
-.socials a:hover, .socials a:focus {
-  background-color: var(--highlight-secondary);
-  border-color: var(--highlight-primary);
-}
-
-@media (min-width: 768px) {
-  .socials {
-    justify-content: flex-start;
-  }
-}
-/* Shared section stylings */
-section {
-  padding-bottom: 100px;
-}
-section h2 {
-  margin-top: 0;
-  padding: 2px;
-  border-bottom: 1px solid var(--text-primary);
-  width: max-content;
-}
-
-.section-details .desc {
-  width: 190px;
-  text-align: left;
-  line-height: 24px;
-}
-.section-details .content {
-  flex: 1 1;
-}
-@media (min-width: 768px) {
-  .section-details .desc {
-    padding-right: 60px;
-  }
-}
-
-@media (min-width: 768px) {
-  .section-details-flipped .desc {
-    padding-right: 0;
-    padding-left: 60px;
-    text-align: right;
-  }
-  .section-details-flipped .container {
-    flex-direction: row-reverse;
-  }
-}
-
-/* First section (About) */
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 55vh;
-}
-#about #pfp {
-  border-radius: 50%;
-  width: 260px;
-  margin: auto;
-  transition-duration: 0.5s;
-}
-#about #pfp:hover {
-  box-shadow: var(--highlight-primary) 0 0 20px;
-}
-#about #bio {
-  text-align: center;
-}
-#about #bio :nth-child(2) {
-  animation: fade-in 1.5s forwards;
-  animation-delay: 0ms;
-  opacity: 0;
-}
-#about #bio :nth-child(3) {
-  animation: fade-in 1.5s forwards;
-  animation-delay: 200ms;
-  opacity: 0;
-}
-#about #bio :nth-child(4) {
-  animation: fade-in 1.5s forwards;
-  animation-delay: 400ms;
-  opacity: 0;
-}
-#about #bio :nth-child(5) {
-  animation: fade-in 1.5s forwards;
-  animation-delay: 600ms;
-  opacity: 0;
-}
-#about #bio h1 {
-  font-size: 42px;
-  font-weight: normal;
-  margin: 0;
-}
-#about #bio p {
-  font-size: 18px;
-  line-height: 36px;
-  font-weight: lighter;
-}
-
-@media (min-width: 768px) {
-  #about #pfp {
-    margin-right: 80px;
-  }
-  #about #bio {
-    text-align: left;
-  }
-  #about #bio p {
-    font-size: 22px;
-  }
-}
-/* Second section (Featured) */
-#featured .waves-animation {
-  animation: fade-in-up 1s forwards;
-  animation-delay: 0.3s;
-  opacity: 0;
-  overflow: hidden;
-  height: 150px;
-}
-#featured .waves-animation svg {
-  animation: bg-fade-in-up 1.5s forwards;
-  background-image: url("../img/wave_pink.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 150px;
-  width: 100%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  fill: var(--bg-secondary);
-}
-#featured .content {
-  animation: fade-in-up 1s forwards;
-  animation-delay: 0.3s;
-  opacity: 0;
-  background-image: linear-gradient(var(--bg-secondary) 20%, transparent);
-  padding: 20px 0;
-  text-align: center;
-}
-#featured .content h2 {
-  margin: auto;
-  margin-top: 0;
-}
-#featured .content > div > :nth-child(1) {
-  animation: fade-in 1s forwards;
-  animation-delay: 500ms;
-  opacity: 0;
-}
-#featured .content > div > :nth-child(2) {
-  animation: fade-in 1s forwards;
-  animation-delay: 600ms;
-  opacity: 0;
-}
-#featured .content > div > :nth-child(3) {
-  animation: fade-in 1s forwards;
-  animation-delay: 700ms;
-  opacity: 0;
 }
 
 /*# sourceMappingURL=site.css.map */

@@ -4,6 +4,7 @@ section {
   padding-bottom: 100px;
 
   h2 {
+    margin: auto;
     margin-top: 0;
     padding: 2px;
     border-bottom: 1px solid var(--text-primary);
@@ -15,24 +16,31 @@ section {
 
 .section-details {
   .desc {
-    width: 190px;
-    text-align: left;
+    text-align: center;
     line-height: 24px;
   }
 
   .content {
     flex: 1 1;
   }
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  section {
+    h2 {
+      margin: 0;
+    }
+  }
+  
+  .section-details {
     .desc {
+      width: 190px;
+      text-align: left;
       padding-right: 60px;
     }
   }
-}
 
-.section-details-flipped {
-  @media (min-width: 768px) {
+  .section-details-flipped {
     .desc {
       padding-right: 0;
       padding-left: 60px;

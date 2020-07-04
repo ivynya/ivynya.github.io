@@ -6,14 +6,14 @@
     animation-delay: 0.3s;
     opacity: 0;
     overflow: hidden;
-    height: 150px;
+    height: 50px;
 
     svg {
       animation: bg-fade-in-up 1.5s forwards;
       background-image: url('../img/wave_pink.svg');
       background-size: cover;
       background-repeat: no-repeat;
-      height: 150px;
+      height: 50px;
       width: 100%;
       margin-left: 50%;
       transform: translateX(-50%);
@@ -39,6 +39,18 @@
         animation: fade-in 1s forwards;
         animation-delay: #{($i * 100) + 500}ms;
         opacity: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #featured {
+    .waves-animation {
+      height: 150px;
+  
+      svg {
+        height: 150px;
       }
     }
   }
