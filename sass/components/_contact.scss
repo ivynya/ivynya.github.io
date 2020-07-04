@@ -18,4 +18,15 @@
   textarea {
     resize: vertical;
   }
+
+  button {
+    background-color: transparent;
+    border: var(--highlight-primary) 1px solid;
+    padding: 15px;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: var(--highlight-primary);
+    }
+  }
 }
