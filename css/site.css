@@ -408,26 +408,26 @@ section h2 {
   }
 }
 /* About page */
-#about-page {
+#text-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-#about-page p {
+#text-page p {
   font-size: 20px;
   max-width: 512px;
   text-align: justify;
 }
-#about-page .caption {
+#text-page .caption {
   margin: 0;
 }
-#about-page ul {
+#text-page ul {
   text-align: left;
 }
 @media (min-width: 768px) {
-  #about-page {
+  #text-page {
     margin-top: 200px;
   }
 }
