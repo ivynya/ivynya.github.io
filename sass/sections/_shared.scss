@@ -1,7 +1,11 @@
 /* Shared section stylings */
 
 section {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+
+  &:not(:first-of-type) {
+    padding-top: 35px;
+  }
 
   h2 {
     margin: auto;
@@ -9,6 +13,18 @@ section {
     padding: 2px;
     border-bottom: 1px solid var(--text-primary);
     width: max-content;
+  }
+}
+
+hr {
+  background-color:	var(--highlight-tertiary);
+  border: none;
+  border-radius: 3px;
+  height: 1px;
+  width: 90%;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
   }
 }
 
@@ -27,7 +43,11 @@ section {
 
 @media (min-width: 768px) {
   section {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+
+    &:not(:first-of-type) {
+      padding-top: 80px;
+    }
 
     h2 {
       margin: 0;
@@ -38,14 +58,14 @@ section {
     .desc {
       width: 190px;
       text-align: left;
-      padding-right: 60px;
+      margin-right: 60px;
     }
   }
 
   .section-details-flipped {
     .desc {
-      padding-right: 0;
-      padding-left: 60px;
+      margin-right: 0;
+      margin-left: 60px;
       text-align: right;
     }
 

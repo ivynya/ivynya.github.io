@@ -26,12 +26,10 @@
 
 /* Fractals - icon-less compact cards */
 .fractal {
-  border: var(--bg-secondary) 3px solid;
   border-radius: 5px;
   color: var(--text-primary);
   text-decoration: none;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 60px;
   transition-duration: 0.2s;
 }
 .fractal .fractal-title {
@@ -238,7 +236,10 @@
 }
 /* Shared section stylings */
 section {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+}
+section:not(:first-of-type) {
+  padding-top: 35px;
 }
 section h2 {
   margin: auto;
@@ -246,6 +247,19 @@ section h2 {
   padding: 2px;
   border-bottom: 1px solid var(--text-primary);
   width: max-content;
+}
+
+hr {
+  background-color: var(--highlight-tertiary);
+  border: none;
+  border-radius: 3px;
+  height: 1px;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  hr {
+    max-width: 768px;
+  }
 }
 
 .section-details .desc {
@@ -258,7 +272,10 @@ section h2 {
 
 @media (min-width: 768px) {
   section {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+  }
+  section:not(:first-of-type) {
+    padding-top: 80px;
   }
   section h2 {
     margin: 0;
@@ -267,12 +284,12 @@ section h2 {
   .section-details .desc {
     width: 190px;
     text-align: left;
-    padding-right: 60px;
+    margin-right: 60px;
   }
 
   .section-details-flipped .desc {
-    padding-right: 0;
-    padding-left: 60px;
+    margin-right: 0;
+    margin-left: 60px;
     text-align: right;
   }
   .section-details-flipped .container {
@@ -438,8 +455,10 @@ section h2 {
   --bg-secondary: #302f65;
   --bg-standard: #000;
   --text-primary: #fff;
+  --text-accent: #faf;
   --highlight-primary: #faf;
   --highlight-secondary: #f9f;
+  --highlight-analagous: #f9c;
   --shard-primary: #494ca0;
   --shard-secondary: #292a47;
   --shard-tertiary: #4b3d8f;
@@ -450,7 +469,10 @@ section h2 {
   --bg-secondary: #fdf;
   --bg-standard: #fff;
   --text-primary: #333;
+  --text-accent: #f5f;
   --highlight-primary: #faf;
+  --highlight-secondary: #f7f;
+  --highlight-tertiary: #f9c;
   --shard-primary: #fcf;
   --shard-secondary: #caf;
   --shard-tertiary: #f8f;
@@ -474,7 +496,7 @@ section h2 {
 
 /* Shared typography */
 a {
-  color: var(--highlight-secondary);
+  color: var(--text-accent);
 }
 
 a.button {

@@ -1,12 +1,10 @@
 /* Fractals - icon-less compact cards */
 
 .fractal {
-  border: var(--bg-secondary) 3px solid;
   border-radius: 5px;
   color: var(--text-primary);
   text-decoration: none;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 60px;
   transition-duration: 0.2s;
 
   .fractal-title {
