@@ -28,14 +28,13 @@
 .fractal .fractal-title {
   margin-bottom: 10px;
   line-height: 30px;
+  flex-wrap: wrap;
 }
 .fractal h3, .fractal p {
   margin: 0;
 }
-.fractal .fractal-sublink {
+.fractal .fractal-sublinks {
   justify-self: flex-end;
-}
-.fractal .fractal-sublink:first-of-type {
   margin-left: auto;
 }
 

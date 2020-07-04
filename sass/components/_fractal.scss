@@ -12,17 +12,15 @@
   .fractal-title {
     margin-bottom: 10px;
     line-height: 30px;
+    flex-wrap: wrap;
   }
 
   h3, p {
     margin: 0;
   }
 
-  .fractal-sublink {
+  .fractal-sublinks {
     justify-self: flex-end;
-
-    &:first-of-type {
-      margin-left: auto;
-    }
+    margin-left: auto;
   }
 }
