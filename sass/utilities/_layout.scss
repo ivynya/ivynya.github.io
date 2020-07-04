@@ -20,9 +20,19 @@ main {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 512px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0;
+
+  // Galaxy fold support (280px wide)
+  // Probably the most horrendous CSS media query ever
+  @media (min-width: 290px) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
 }
 
 .footer {

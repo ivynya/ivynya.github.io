@@ -9,7 +9,7 @@
 
   #pfp {
     border-radius: 50%;
-    width: 260px;
+    width: 200px;
     margin: auto;
     transition-duration: 0.5s;
 
@@ -31,28 +31,40 @@
     text-align: center;
 
     h1 {
-      font-size: 42px;
+      font-size: 36px;
       font-weight: normal;
       margin: 0;
     }
   
     p {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 36px;
       font-weight: lighter;
     }
   }
 }
 
+@media (min-width: 350px) {
+  // This really heckin bothered me
+  #about #bio p {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 768px) {
   #about {
     #pfp {
+      width: 260px;
       margin-right: 80px;
     }
 
     #bio {
       margin-top: 0;
       text-align: left;
+
+      h1 {
+        font-size: 42px;
+      }
 
       p {
         font-size: 22px;
