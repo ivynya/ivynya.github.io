@@ -99,7 +99,30 @@
     }
   }
 
-  &:hover, &:focus, &:focus-within {
+  &:hover, &:focus {
+    box-shadow: var(--box-shadow) 0 0 10px;
+    outline: none;
+
+    img {
+      animation-play-state: running;
+    }
+
+    .shard-nested {
+      opacity: 1;
+      transition-duration: 0.5s;
+      transform: scale(1);
+
+      .links {
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+
+  // THANKS EDGE, REALLY LOVE YOU.
+  // Edge ignores entire blocks of code if even one of the
+  // selectors is invalid. This means focus-within can't be
+  // combined with those above.
+  &:focus-within {
     box-shadow: var(--box-shadow) 0 0 10px;
     outline: none;
 
@@ -137,7 +160,13 @@
       transition-delay: 0.2s;
     }
   
-    &:hover, &:focus, &:focus-within {
+    &:hover, &:focus {
+      flex: 5 1;
+      transform: scale(1.05);
+    }
+
+    // See line 121
+    &:focus-within {
       flex: 5 1;
       transform: scale(1.05);
     }

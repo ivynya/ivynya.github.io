@@ -162,19 +162,34 @@
   margin-bottom: 2px;
   font-size: 14px;
 }
-.shard:hover, .shard:focus, .shard:focus-within {
+.shard:hover, .shard:focus {
   box-shadow: var(--box-shadow) 0 0 10px;
   outline: none;
 }
-.shard:hover img, .shard:focus img, .shard:focus-within img {
+.shard:hover img, .shard:focus img {
   animation-play-state: running;
 }
-.shard:hover .shard-nested, .shard:focus .shard-nested, .shard:focus-within .shard-nested {
+.shard:hover .shard-nested, .shard:focus .shard-nested {
   opacity: 1;
   transition-duration: 0.5s;
   transform: scale(1);
 }
-.shard:hover .shard-nested .links, .shard:focus .shard-nested .links, .shard:focus-within .shard-nested .links {
+.shard:hover .shard-nested .links, .shard:focus .shard-nested .links {
+  transform: translateY(0) scale(1);
+}
+.shard:focus-within {
+  box-shadow: var(--box-shadow) 0 0 10px;
+  outline: none;
+}
+.shard:focus-within img {
+  animation-play-state: running;
+}
+.shard:focus-within .shard-nested {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transform: scale(1);
+}
+.shard:focus-within .shard-nested .links {
   transform: translateY(0) scale(1);
 }
 
@@ -192,7 +207,11 @@
   .shard .shard-nested {
     transition-delay: 0.2s;
   }
-  .shard:hover, .shard:focus, .shard:focus-within {
+  .shard:hover, .shard:focus {
+    flex: 5 1;
+    transform: scale(1.05);
+  }
+  .shard:focus-within {
     flex: 5 1;
     transform: scale(1.05);
   }
