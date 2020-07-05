@@ -8,14 +8,14 @@
   input, textarea {
     background-color: transparent;
     border: var(--highlight-primary) 1px solid;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-family: inherit;
     font-size: 16px;
     padding: 10px 12px;
     margin-bottom: 25px;
 
     &::placeholder {
-      color: var(--text-primary);
+      color: var(--text-secondary);
     }
   }
 
@@ -28,6 +28,7 @@
     border: var(--highlight-primary) 1px solid;
     color: var(--text-primary);
     font-family: inherit;
+    font-size: 16px;
     padding: 15px;
     transition-duration: 0.3s;
 

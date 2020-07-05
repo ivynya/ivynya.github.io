@@ -5,14 +5,14 @@
 .contact-form input, .contact-form textarea {
   background-color: transparent;
   border: var(--highlight-primary) 1px solid;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-family: inherit;
   font-size: 16px;
   padding: 10px 12px;
   margin-bottom: 25px;
 }
 .contact-form input::placeholder, .contact-form textarea::placeholder {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 .contact-form textarea {
   resize: vertical;
@@ -22,6 +22,7 @@
   border: var(--highlight-primary) 1px solid;
   color: var(--text-primary);
   font-family: inherit;
+  font-size: 16px;
   padding: 15px;
   transition-duration: 0.3s;
 }
@@ -222,8 +223,7 @@
   text-decoration: none;
   line-height: 25px;
   height: 25px;
-  width: 25px;
-  padding: 5px;
+  padding: 5px 10px;
   transition-duration: 0.2s;
 }
 .socials a:not(:last-of-type) {
@@ -232,6 +232,11 @@
 .socials a:hover, .socials a:focus {
   background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
+}
+
+.socials-fixed a {
+  width: 25px;
+  padding: 5px;
 }
 
 @media (min-width: 768px) {
@@ -448,9 +453,12 @@ hr {
 #text-page ul {
   text-align: left;
 }
+#text-page ul hr {
+  width: 100%;
+}
 @media (min-width: 768px) {
   #text-page {
-    margin-top: 200px;
+    padding-top: 200px;
   }
 }
 
@@ -460,8 +468,9 @@ hr {
   --bg-secondary: #302f65;
   --bg-standard: #000;
   --text-primary: #fff;
+  --text-secondary: #eee;
   --text-accent: #faf;
-  --highlight-primary: #f9f;
+  --highlight-primary: #b7f;
   --highlight-secondary: #f7f;
   --highlight-tertiary: #f7c;
   --box-shadow: #c7a;
@@ -475,6 +484,7 @@ hr {
   --bg-secondary: #fdf;
   --bg-standard: #fff;
   --text-primary: #333;
+  --text-secondary: #555;
   --text-accent: #f5f;
   --highlight-primary: #faf;
   --highlight-secondary: #f7f;
@@ -533,6 +543,9 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   margin: 0;
+  min-height: calc(100vh - 200px);
+  padding-bottom: 200px;
+  position: relative;
 }
 
 main {
@@ -559,9 +572,13 @@ main {
 }
 
 .footer {
-  border-top: var(--highlight-primary) 1px solid;
-  margin-top: 60px;
-  padding: 30px 20px;
+  border-top: var(--highlight-tertiary) 1px solid;
+  padding: 20px;
+  padding-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .flex-smart {
