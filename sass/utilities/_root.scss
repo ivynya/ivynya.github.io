@@ -42,7 +42,8 @@
 }
 
 ::selection {
-  background-color: #0af4;
+  // RGBA for Edge<79 & IE
+  background-color: rgba(0, 170, 255, 0.267);
 }
 
 ::-webkit-scrollbar {
