@@ -1,4 +1,7 @@
 /* Contact form */
+.contact-form label {
+  margin-bottom: 10px;
+}
 .contact-form input, .contact-form textarea {
   background-color: transparent;
   border: var(--highlight-primary) 1px solid;
@@ -17,6 +20,8 @@
 .contact-form button {
   background-color: transparent;
   border: var(--highlight-primary) 1px solid;
+  color: var(--text-primary);
+  font-family: inherit;
   padding: 15px;
   transition-duration: 0.3s;
 }
@@ -132,7 +137,7 @@
   font-size: 14px;
 }
 .shard:hover, .shard:focus, .shard:focus-within {
-  box-shadow: var(--highlight-primary) 0 0 10px;
+  box-shadow: var(--box-shadow) 0 0 10px;
   outline: none;
 }
 .shard:hover img, .shard:focus img, .shard:focus-within img {
@@ -225,7 +230,7 @@
   margin-right: 10px;
 }
 .socials a:hover, .socials a:focus {
-  background-color: var(--highlight-secondary);
+  background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
 }
 
@@ -456,9 +461,10 @@ hr {
   --bg-standard: #000;
   --text-primary: #fff;
   --text-accent: #faf;
-  --highlight-primary: #faf;
-  --highlight-secondary: #f9f;
-  --highlight-analagous: #f9c;
+  --highlight-primary: #f9f;
+  --highlight-secondary: #f7f;
+  --highlight-tertiary: #f7c;
+  --box-shadow: #c7a;
   --shard-primary: #494ca0;
   --shard-secondary: #292a47;
   --shard-tertiary: #4b3d8f;
@@ -473,6 +479,7 @@ hr {
   --highlight-primary: #faf;
   --highlight-secondary: #f7f;
   --highlight-tertiary: #f9c;
+  --box-shadow: #faf;
   --shard-primary: #fcf;
   --shard-secondary: #caf;
   --shard-tertiary: #f8f;
@@ -612,12 +619,12 @@ main {
   }
 }
 /* CSS tooltips for :hover */
-[data-tt] {
+[aria-label] {
   position: relative;
   /* Positioning and visibility */
   /* Dynamic-width tooltip */
 }
-[data-tt]:before {
+[aria-label]:before {
   border: var(--highlight-primary) 1px solid;
   position: absolute;
   bottom: calc(100% + 5px);
@@ -629,10 +636,10 @@ main {
   transition: 0.15s;
   will-change: transform;
 }
-[data-tt]:before {
+[aria-label]:before {
   background-color: var(--bg-standard);
   color: var(--text-primary);
-  content: attr(data-tt);
+  content: attr(aria-label);
   padding: 8px 12px;
   line-height: 18px;
   height: 18px;
@@ -643,7 +650,7 @@ main {
   text-align: center;
   transform: translate(-50%, 0);
 }
-[data-tt]:hover:before, [data-tt]:focus:before {
+[aria-label]:hover:before, [aria-label]:focus:before {
   /* Tooltip becomes visible on hover */
   visibility: visible;
   opacity: 1;

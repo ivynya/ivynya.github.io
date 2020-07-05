@@ -100,7 +100,7 @@
   }
 
   &:hover, &:focus, &:focus-within {
-    box-shadow: var(--highlight-primary) 0 0 10px;
+    box-shadow: var(--box-shadow) 0 0 10px;
     outline: none;
 
     img {

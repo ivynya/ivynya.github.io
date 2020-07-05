@@ -1,6 +1,6 @@
 /* CSS tooltips for :hover */
 
-[data-tt] {
+[aria-label] {
   position: relative;
 
   /* Positioning and visibility */
@@ -21,7 +21,7 @@
   &:before {
     background-color: var(--bg-standard);
     color: var(--text-primary);
-    content: attr(data-tt);
+    content: attr(aria-label);
     padding: 8px 12px;
     line-height: 18px;
     height: 18px;
