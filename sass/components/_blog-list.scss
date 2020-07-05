@@ -20,5 +20,9 @@
       color: var(--text-primary);
       text-decoration: none;
     }
+
+    &:hover {
+      border-color: var(--highlight-secondary);
+    }
   }
 }

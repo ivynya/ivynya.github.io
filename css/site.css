@@ -19,6 +19,9 @@
   color: var(--text-primary);
   text-decoration: none;
 }
+.blog-list li:hover {
+  border-color: var(--highlight-secondary);
+}
 
 /* Contact form */
 .contact-form label {
