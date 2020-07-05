@@ -22,6 +22,7 @@ hr {
   border-radius: 3px;
   height: 1px;
   width: 90%;
+  margin: auto;
 
   @media (min-width: 768px) {
     max-width: 768px;
@@ -34,6 +35,7 @@ hr {
   .desc {
     text-align: center;
     line-height: 24px;
+    margin-bottom: 30px;
   }
 
   .content {

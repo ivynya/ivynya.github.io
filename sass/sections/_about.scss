@@ -12,10 +12,6 @@
     width: 200px;
     margin: auto;
     transition-duration: 0.5s;
-
-    &:hover {
-      box-shadow: var(--highlight-primary) 0 0 20px;
-    }
   }
 
   #bio {
