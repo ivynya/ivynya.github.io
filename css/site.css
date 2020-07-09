@@ -520,22 +520,6 @@ hr {
   --shard-tertiary: #4b3d8f;
 }
 
-[data-theme=sakura] {
-  --bg-primary: #fff;
-  --bg-secondary: #fdf;
-  --bg-standard: #fff;
-  --text-primary: #333;
-  --text-secondary: #555;
-  --text-accent: #f5f;
-  --highlight-primary: #faf;
-  --highlight-secondary: #f7f;
-  --highlight-tertiary: #f9c;
-  --box-shadow: #faf;
-  --shard-primary: #fcf;
-  --shard-secondary: #caf;
-  --shard-tertiary: #f8f;
-}
-
 ::selection {
   background-color: rgba(0, 170, 255, 0.267);
 }
@@ -587,7 +571,6 @@ body {
   min-height: calc(100vh - 200px);
   padding-bottom: 200px;
   position: relative;
-  transition-duration: 1s;
 }
 
 main {

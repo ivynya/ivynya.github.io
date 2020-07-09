@@ -20,27 +20,6 @@
   --shard-tertiary: #4b3d8f;
 }
 
-// Alternate sakura theme
-[data-theme="sakura"] {
-  --bg-primary: #fff;
-  --bg-secondary: #fdf;
-  --bg-standard: #fff;
-
-  --text-primary: #333;
-  --text-secondary: #555;
-  --text-accent: #f5f;
-  
-  --highlight-primary: #faf;
-  --highlight-secondary: #f7f;
-  --highlight-tertiary: #f9c;
-
-  --box-shadow: #faf;
-
-  --shard-primary: #fcf;
-  --shard-secondary: #caf;
-  --shard-tertiary: #f8f;
-}
-
 ::selection {
   // RGBA for Edge<79 & IE
   background-color: rgba(0, 170, 255, 0.267);
