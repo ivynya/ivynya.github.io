@@ -10,6 +10,7 @@
 .blog-list li {
   border: var(--highlight-primary) 1px solid;
   border-radius: 5px;
+  margin-bottom: 10px;
   padding: 10px 20px;
   font-size: 20px;
 }
