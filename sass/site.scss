@@ -1,4 +1,10 @@
 
+@import 'utilities/root';
+@import 'utilities/typography';
+@import 'utilities/layout';
+@import 'utilities/animations';
+@import 'utilities/tooltips';
+
 @import 'components/blog-list';
 @import 'components/contact';
 @import 'components/fractal';
@@ -10,9 +16,3 @@
 @import 'sections/featured';
 
 @import 'sections/text-page';
-
-@import 'utilities/root';
-@import 'utilities/typography';
-@import 'utilities/layout';
-@import 'utilities/animations';
-@import 'utilities/tooltips';

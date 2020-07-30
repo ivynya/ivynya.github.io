@@ -7,15 +7,15 @@
 
   input, textarea {
     background-color: transparent;
-    border: var(--highlight-primary) 1px solid;
-    color: var(--text-secondary);
+    border: $highlight-primary 1px solid;
+    color: $text-secondary;
     font-family: inherit;
     font-size: 16px;
     padding: 10px 12px;
     margin-bottom: 25px;
 
     &::placeholder {
-      color: var(--text-secondary);
+      color: $text-secondary;
     }
   }
 
@@ -25,15 +25,15 @@
 
   button {
     background-color: transparent;
-    border: var(--highlight-primary) 1px solid;
-    color: var(--text-primary);
+    border: $highlight-primary 1px solid;
+    color: $text-primary;
     font-family: inherit;
     font-size: 16px;
     padding: 15px;
     transition-duration: 0.3s;
 
     &:hover {
-      background-color: var(--highlight-primary);
+      background-color: $highlight-primary;
     }
   }
 }

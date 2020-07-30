@@ -5,7 +5,7 @@
 
   /* Positioning and visibility */
   &:before {
-    border: var(--highlight-primary) 1px solid;
+    border: $highlight-primary 1px solid;
     position: absolute;
     bottom: calc(100% + 5px);
     top: auto;
@@ -19,8 +19,8 @@
 
   /* Dynamic-width tooltip */
   &:before {
-    background-color: var(--bg-standard);
-    color: var(--text-primary);
+    background-color: $bg-standard;
+    color: $text-primary;
     content: attr(aria-label);
     padding: 8px 12px;
     line-height: 18px;

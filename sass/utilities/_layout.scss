@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: $bg-primary;
+  color: $text-primary;
   margin: 0;
   min-height: calc(100vh - 200px);
   padding-bottom: 200px;
@@ -39,7 +39,7 @@ main {
 }
 
 .footer {
-  border-top: var(--highlight-tertiary) 1px solid;
+  border-top: $highlight-tertiary 1px solid;
   padding: 30px 20px;
   padding-bottom: 35px;
   position: absolute;
@@ -49,8 +49,8 @@ main {
 
   button {
     background-color: transparent;
-    border: var(--highlight-primary) 1px solid;
-    color: var(--text-accent);
+    border: $highlight-primary 1px solid;
+    color: $text-accent;
     padding: 5px 10px;
   }
 }

@@ -56,9 +56,9 @@
   }
 
   .shard-nested {
-    background-color: var(--bg-standard);
+    background-color: $bg-standard;
     border-radius: 10px;
-    color: var(--text-primary);
+    color: $text-primary;
     padding: 20px;
     position: absolute;
     right: 10px;
@@ -102,7 +102,7 @@
   }
 
   &:hover, &:focus {
-    box-shadow: var(--box-shadow) 0 0 10px;
+    box-shadow: $box-shadow 0 0 10px;
     outline: none;
 
     img {
@@ -125,7 +125,7 @@
   // selectors is invalid. This means focus-within can't be
   // combined with those above.
   &:focus-within {
-    box-shadow: var(--box-shadow) 0 0 10px;
+    box-shadow: $box-shadow 0 0 10px;
     outline: none;
 
     img {

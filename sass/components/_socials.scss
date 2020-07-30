@@ -5,9 +5,9 @@
   justify-content: center;
 
   a {
-    border: 1px solid var(--text-primary);
+    border: 1px solid $text-primary;
     border-radius: 3px;
-    color: var(--text-primary);
+    color: $text-primary;
     text-align: center;
     text-decoration: none;
     line-height: 25px;
@@ -19,8 +19,8 @@
     } 
 
     &:hover, &:focus {
-      background-color: var(--highlight-primary);
-      border-color: var(--highlight-primary);
+      background-color: $highlight-primary;
+      border-color: $highlight-primary;
     }
   }
 }

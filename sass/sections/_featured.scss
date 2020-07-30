@@ -17,7 +17,7 @@
       width: 100%;
       margin-left: 50%;
       transform: translateX(-50%);
-      fill: var(--bg-secondary);
+      fill: $bg-secondary;
     }
   }
 
@@ -25,7 +25,7 @@
     animation: fade-in-up 1s forwards;
     animation-delay: 0.3s;
     opacity: 0;
-    background-image: linear-gradient(var(--bg-secondary) 20%, transparent);
+    background-image: linear-gradient($bg-secondary 20%, transparent);
     padding: 20px 0;
     text-align: center;
 

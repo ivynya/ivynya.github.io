@@ -1,20 +1,26 @@
 /* Root styles */
 
+// SASS Variables
+$bg-primary: #182235;
+$bg-secondary: #302f65;
+$bg-standard: #000;
+
+$text-primary: #fff;
+$text-secondary: #eee;
+$text-accent: #faf;
+
+$highlight-primary: #b7f;
+$highlight-secondary: #f7f;
+$highlight-tertiary: #f7c;
+
+$box-shadow: #c7a;
+
+$shard-primary: #494ca0;
+$shard-secondary: #292a47;
+$shard-tertiary: #4b3d8f;
+
+// Shards require the css variable override
 :root {
-  --bg-primary: #182235;
-  --bg-secondary: #302f65;
-  --bg-standard: #000;
-
-  --text-primary: #fff;
-  --text-secondary: #eee;
-  --text-accent: #faf;
-  
-  --highlight-primary: #b7f;
-  --highlight-secondary: #f7f;
-  --highlight-tertiary: #f7c;
-
-  --box-shadow: #c7a;
-
   --shard-primary: #494ca0;
   --shard-secondary: #292a47;
   --shard-tertiary: #4b3d8f;
@@ -30,9 +36,9 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+  background-color: $bg-secondary;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--highlight-primary);
+  background-color: $highlight-primary;
 }

@@ -9,7 +9,7 @@
   width: 100%;
 
   li {
-    border: var(--highlight-primary) 1px solid;
+    border: $highlight-primary 1px solid;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px 20px;
@@ -18,12 +18,12 @@
     a {
       display: flex;
       justify-content: space-between;
-      color: var(--text-primary);
+      color: $text-primary;
       text-decoration: none;
     }
 
     &:hover {
-      border-color: var(--highlight-secondary);
+      border-color: $highlight-secondary;
     }
   }
 }

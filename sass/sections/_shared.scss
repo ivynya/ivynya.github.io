@@ -11,13 +11,13 @@ section {
     margin: auto;
     margin-top: 0;
     padding: 2px;
-    border-bottom: 1px solid var(--text-primary);
+    border-bottom: 1px solid $text-primary;
     width: max-content;
   }
 }
 
 hr {
-  background-color:	var(--highlight-tertiary);
+  background-color:	$highlight-tertiary;
   border: none;
   border-radius: 3px;
   height: 1px;
