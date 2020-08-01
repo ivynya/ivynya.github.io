@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Semantics | Integration Testing</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Kyle Lu | SDBagel">
+  <meta name="description" content="Semantics are an important next step into learning how to structure code. They clarify why something is located in a specific place and the purpose it serves. Code semantics benefits both developers and end users. We'll cover how it benefits the developer (you!) today.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Semantics | Integration Testing">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="Semantics are an important next step into learning how to structure code. They clarify why something is located in a specific place and the purpose it serves. Code semantics benefits both developers and end users. We'll cover how it benefits the developer (you!) today.">
+  <meta property="og:image" content="https://sdbagel.com/img/og_integration.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/site.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200;400;700&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="text-page" class="container">
+    <h1>Semantics</h1>
+    <nav class="socials flex-row">
+      <a href="./structure">prev</a>
+      <a href="../integration-testing">all</a>
+      <a href="../integration-testing">next</a>
+    </nav>
+    <br>
+    <p><i>"So, uh, the thing interacts with the other thing for things."</i></p>
+    <p>Semantics are an important next step into learning how to structure code. They clarify why something is located in a specific place and the purpose it serves. Code semantics benefits both developers and end users. We'll cover how it benefits the developer (you!) today, as inclusive design with semantics for the end user is a broad topic on its own.</p>
+    <p>For developers, code semantics are incredibly useful for building implicit structure. Names of functions, variables, and files are a prominent part of code semantics. Naming schemes can and should accurately describe what a function’s purpose is, where it sits in the entire codebase, and potentially even how it should be used, so any developer familiar with the standard being used will have a good idea of what is going on.</p>
+    <p>AnimateForms (cross promo!) is an example of code that uses naming semantics to its advantage. It must expose different animations, easings, and helpers for developers to use. In this library, these functions are split into the Animate, Easings, and Helpers classes respectively. All Animate functions are named with the precise action they do and take similar arguments to all other animate functions. All Easings functions start with the easing type, then “in” and/or “out”, resulting in an easing like “QuadInOut.” Consistency and shared attributes like names and parameters in AnimateForms make it easy to understand and work with. Once you know how one thing works, you know how the rest of it works.</p>
+    <p>Because of this defined and consistent naming scheme, it’s also incredibly easy to make additions to this library. Not only do the code semantics help the users of the library, they also help the author of the original code maintain it without creating messes of unclear documentation and comments.</p>
+    <p>This is not to say that well-structured and semantically correct code is a replacement for comments and documentation. It’s simply a supplement; Documenting and commenting complex code segments only helps further understanding of what a certain piece of code does and what role it plays and is essential for best coding practices (especially in team environments).</p>
+    <p>Learning proper code semantics can seem like a waste of time to new developers coding solo and for small projects. However, it’s an absolutely essential best practice and aspect of the overall code structure by helping keep code maintainable, extensible, and usable to you and other developers.</p>
+  </main>
+  <footer class="container footer">
+    <p><a href="../">Home</a> - <a href="../about">More About Me</a> - <a href="../integration-testing">My Blog</a></p>
+    <p>&copy; Kyle | SDBagel 2020</p>
+  </footer>
+</body>
+</html>
