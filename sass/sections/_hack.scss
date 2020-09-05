@@ -3,8 +3,8 @@
 
 #hack {
     #pre {
-        justify-content: flex-end;
-        width: 100%;
+        width: calc(100% - 40px);
+        text-align: right;
     }
 
     a, code {
@@ -31,7 +31,6 @@
         }
 
         .hack-row {
-            width: 100%;
             justify-content: space-between;
             margin-bottom: 20px;
         }
@@ -39,7 +38,6 @@
 
     .hack-title {
         justify-content: space-between;
-        width: 100%;
 
         #ico {
             display: none;
@@ -48,17 +46,19 @@
         #title {
             font-size: 1.3rem;
             text-align: right;
-        
-            padding-left: 50px;
 
             .btn {
                 width: 250px;
             }
         }
 
-        @media (min-width: 400px) {
+        @media (min-width: 500px) {
             #ico {
                 display: block;
+            }
+
+            #title {
+                padding-left: 50px;
             }
         }
 
@@ -89,23 +89,8 @@
             margin-bottom: 20px;
         }
 
-        @media (min-width: 768px) {
-            &:not(:last-of-type) {
-                margin-bottom: 0;
-                margin-right: 20px;
-            }
-        }
-
         &.b2-1 {
             flex: 2 1;
-        }
-
-        &.block-right {
-            h2 {
-                width: unset;
-            }
-
-            text-align: right;
         }
 
         h2 {
@@ -117,6 +102,21 @@
         p {
             font-size: 1.1rem;
             line-height: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            &.block-right {
+                h2 {
+                    width: unset;
+                }
+    
+                text-align: right;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
         }
     }
 
@@ -158,6 +158,10 @@
         @media (min-width: 768px) {
             text-align: left;
         }
+    }
+
+    #cta {
+        width: calc(100% - 30px);
     }
 
     #cta a {
