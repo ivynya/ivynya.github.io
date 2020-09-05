@@ -23,17 +23,7 @@
     resize: vertical;
   }
 
-  button {
-    background-color: transparent;
-    border: $highlight-primary 1px solid;
-    color: $text-primary;
-    font-family: inherit;
-    font-size: 16px;
+  .btn {
     padding: 15px;
-    transition-duration: 0.3s;
-
-    &:hover {
-      background-color: $highlight-primary;
-    }
   }
 }

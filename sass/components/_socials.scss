@@ -31,6 +31,12 @@
     width: 25px;
     height: 25px;
     padding: 5px;
+
+    &.focus {
+      border-color: $highlight-primary;
+      width: unset;
+      padding: 5px 10px;
+    }
   }
 }
 

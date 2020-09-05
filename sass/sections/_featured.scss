@@ -37,7 +37,7 @@
     @for $i from 0 through 2 {
       > div > :nth-child(#{($i + 1)}) {
         animation: fade-in 1s forwards;
-        animation-delay: #{($i * 100) + 500}ms;
+        animation-delay: #{($i * -100) + 500}ms;
         opacity: 0;
       }
     }

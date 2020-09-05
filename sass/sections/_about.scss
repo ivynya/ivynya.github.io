@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 55vh;
+  min-height: 45vh;
 
   #pfp {
     border-radius: 50%;
@@ -18,7 +18,7 @@
     @for $i from 0 through 3 {
       :nth-child(#{($i + 2)}) {
         animation: fade-in 1.5s forwards;
-        animation-delay: #{$i * 200 }ms;
+        animation-delay: #{$i * 200}ms;
         opacity: 0;
       }
     }
@@ -49,6 +49,10 @@
 
 @media (min-width: 768px) {
   #about {
+    > div {
+      padding-top: 150px;
+    }
+
     #pfp {
       width: 260px;
       margin-right: 80px;

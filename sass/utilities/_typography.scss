@@ -21,3 +21,23 @@ a.button {
     background-color: $highlight-primary;
   }
 }
+
+.btn {
+  background-color: transparent;
+  border: $highlight-primary 1px solid;
+  border-radius: 2px;
+  color: $text-primary;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  transition-duration: 0.3s;
+
+  &:hover {
+  background-color: $highlight-primary;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}

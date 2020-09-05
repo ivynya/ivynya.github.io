@@ -74,3 +74,8 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}

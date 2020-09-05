@@ -75,4 +75,22 @@ hr {
       flex-direction: row-reverse;
     }
   }
+
+  .section-details-center {
+    .desc {
+      margin: auto;
+      width: 320px;
+      text-align: center;
+
+      h2 {
+        width: unset;
+        padding-bottom: 8px;
+      }
+    }
+
+    .container {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 }

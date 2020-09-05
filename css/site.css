@@ -42,6 +42,25 @@ a.button:hover, a.button:focus {
   background-color: #b7f;
 }
 
+.btn {
+  background-color: transparent;
+  border: #b7f 1px solid;
+  border-radius: 2px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  transition-duration: 0.3s;
+}
+.btn:hover {
+  background-color: #b7f;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
 /* Layout and typography */
 html {
   font-family: nunito, sans-serif;
@@ -116,6 +135,11 @@ main {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 /* CSS Animations */
@@ -237,17 +261,8 @@ main {
 .contact-form textarea {
   resize: vertical;
 }
-.contact-form button {
-  background-color: transparent;
-  border: #b7f 1px solid;
-  color: #fff;
-  font-family: inherit;
-  font-size: 16px;
+.contact-form .btn {
   padding: 15px;
-  transition-duration: 0.3s;
-}
-.contact-form button:hover {
-  background-color: #b7f;
 }
 
 /* Fractals - icon-less compact cards */
@@ -338,8 +353,7 @@ main {
   will-change: transform, opacity, contents;
 }
 .shard .shard-nested h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
+  margin: 0;
   font-size: 26px;
 }
 .shard .shard-nested .desc {
@@ -475,6 +489,11 @@ main {
   height: 25px;
   padding: 5px;
 }
+.socials-fixed a.focus {
+  border-color: #b7f;
+  width: unset;
+  padding: 5px 10px;
+}
 
 @media (min-width: 768px) {
   .socials {
@@ -544,6 +563,20 @@ hr {
   .section-details-flipped .container {
     flex-direction: row-reverse;
   }
+
+  .section-details-center .desc {
+    margin: auto;
+    width: 320px;
+    text-align: center;
+  }
+  .section-details-center .desc h2 {
+    width: unset;
+    padding-bottom: 8px;
+  }
+  .section-details-center .container {
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 /* First section (About) */
 #about {
@@ -551,7 +584,7 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 55vh;
+  min-height: 45vh;
 }
 #about #pfp {
   border-radius: 50%;
@@ -600,6 +633,9 @@ hr {
   }
 }
 @media (min-width: 768px) {
+  #about > div {
+    padding-top: 150px;
+  }
   #about #pfp {
     width: 260px;
     margin-right: 80px;
@@ -653,12 +689,12 @@ hr {
 }
 #featured .content > div > :nth-child(2) {
   animation: fade-in 1s forwards;
-  animation-delay: 600ms;
+  animation-delay: 400ms;
   opacity: 0;
 }
 #featured .content > div > :nth-child(3) {
   animation: fade-in 1s forwards;
-  animation-delay: 700ms;
+  animation-delay: 300ms;
   opacity: 0;
 }
 
@@ -699,6 +735,154 @@ hr {
   #text-page {
     padding-top: 200px;
   }
+}
+
+#hack #pre {
+  justify-content: flex-end;
+  width: 100%;
+}
+#hack a, #hack code {
+  color: #00F2D2;
+  font-family: monospace;
+  transition-duration: 0.2s;
+}
+#hack a:hover {
+  color: #00bfa6;
+}
+#hack hr {
+  background-color: #008c79;
+}
+#hack footer {
+  border-color: #008c79;
+}
+#hack section:not(:last-of-type) {
+  margin-bottom: 60px;
+}
+#hack section .hack-row {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#hack .hack-title {
+  justify-content: space-between;
+  width: 100%;
+}
+#hack .hack-title #ico {
+  display: none;
+}
+#hack .hack-title #title {
+  font-size: 1.3rem;
+  text-align: right;
+  padding-left: 50px;
+}
+#hack .hack-title #title .btn {
+  width: 250px;
+}
+@media (min-width: 400px) {
+  #hack .hack-title #ico {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #hack .hack-title #ico {
+    width: 300px;
+  }
+  #hack .hack-title #title {
+    font-size: 1.8rem;
+    padding-left: 50px;
+  }
+  #hack .hack-title #title .btn {
+    width: 300px;
+  }
+}
+#hack .block {
+  background-color: #253451;
+  border-radius: 5px;
+  flex: 1 1;
+  padding: 20px;
+}
+#hack .block:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  #hack .block:not(:last-of-type) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+#hack .block.b2-1 {
+  flex: 2 1;
+}
+#hack .block.block-right {
+  text-align: right;
+}
+#hack .block.block-right h2 {
+  width: unset;
+}
+#hack .block h2 {
+  border: none;
+  color: #00F2D2;
+  font-size: 1.3rem;
+}
+#hack .block p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+#hack .vertibar h2 {
+  text-align: center;
+  width: unset;
+}
+#hack .vertibar span {
+  font-size: 4.5rem;
+  text-align: center;
+}
+#hack #hack-cards :nth-child(0) {
+  animation: fade-in 0.8s forwards;
+  animation-delay: -150ms;
+  opacity: 0;
+}
+#hack #hack-cards :nth-child(1) {
+  animation: fade-in 0.8s forwards;
+  animation-delay: 0ms;
+  opacity: 0;
+}
+#hack #hack-cards :nth-child(2) {
+  animation: fade-in 0.8s forwards;
+  animation-delay: 150ms;
+  opacity: 0;
+}
+#hack #hack-cards :nth-child(3) {
+  animation: fade-in 0.8s forwards;
+  animation-delay: 300ms;
+  opacity: 0;
+}
+#hack #hack-cards :nth-child(4) {
+  animation: fade-in 0.8s forwards;
+  animation-delay: 450ms;
+  opacity: 0;
+}
+#hack #resources {
+  text-align: center;
+}
+#hack #resources h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+#hack #resources p {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  #hack #resources {
+    text-align: left;
+  }
+}
+#hack #cta a {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 15px;
+}
+#hack #cta a:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=site.css.map */

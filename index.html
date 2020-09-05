@@ -32,6 +32,7 @@
         <div id="bio" class="flex-column">
           <h1>Kyle | SDBagel</h1>
           <div class="socials socials-fixed flex-row">
+            <a href="./hack" target="_blank" aria-label="Learn WebDev with Me!" class="focus">hack club</a>
             <a href="mailto:sdbagel@gmail.com" target="_blank" rel="noreferrer" aria-label="Email Me">em</a>
             <a href="https://linkedin.com/in/sdbagel" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
             <a href="https://github.com/SDBagel" target="_blank" rel="noreferrer" aria-label="GitHub">gh</a>
@@ -55,7 +56,6 @@
             <img src="img/shard_animate.svg" alt="AnimateForms Icon">
             <div class="shard-nested">
               <h4>WinForms<br>Animation Library</h4>
-              <p class="type">ALPHA</p>
               <p class="desc">Elevate your next WinForms project with AnimateForms, featuring dynamic Timeline support, lifecycle hooks, and included easings in a lightweight NuGet package.</p>
               <div class="links">
                 <a href="https://github.com/SDBagel/AnimateForms" class="button">GitHub</a>
@@ -69,9 +69,8 @@
             <p class="type">BLOG</p>
             <img src="img/shard_integration.svg" alt="Integration Testing Icon">
             <div class="shard-nested">
-              <h4>Design Reference<br>for Code and More</h4>
-              <p class="type">HARMONY</p>
-              <p class="desc">Integration Testing is a blog for designing code with better practices that lead to better experiences and creations.</p>
+              <h4>Learn.™</h4>
+              <p class="desc">From ideology, philosophical to the practical, I am to provide my view on what makes great code happen. Check it out!<br><br>*not actually trademarked</p>
               <div class="links">
                 <a href="./integration-testing" class="button">Read the Latest</a>
               </div>
@@ -83,11 +82,9 @@
             <img src="img/shard_turbo.svg" alt="Turbodrive Icon">
             <div class="shard-nested">
               <h4>Turbocharged<br>GSuite</h4>
-              <p class="type">TURBO</p>
               <p class="desc">A turbocharged client for Google Classroom and Drive. Program custom widgets and macros with Microsoft 365 integration. Built on Angular, available on web and desktop.</p>
               <div class="links">
                 <a href="https://github.com/SDBagel/Turbodrive" class="button">GitHub</a>
-                <a href="" class="button">Coming Q3 2020</a>
               </div>
             </div>
           </div>
@@ -134,6 +131,18 @@
       </div>
     </section>
     <hr>
+    <section id="course-cta" class="section-details section-details-center">
+      <div class="flex-smart container">
+        <div class="desc">
+          <h2>Learn Web Development!</h2>
+          <p>A fun-first approach to learning practical web development, with skills and concepts you'll <em>actually</em> use in the future, taught by me.</p>
+          <br>
+          <a href="./hack" class="btn">More Information</a>
+        </div>
+        <br>
+      </div>
+    </section>
+    <hr>
     <section id="contact" class="section-details section-details-flipped">
       <div class="flex-smart container">
         <div class="desc">
@@ -143,7 +152,7 @@
         <form class="content contact-form flex-column">
           <input type="text" name="subject" id="contact_subject" aria-label="Email Subject" placeholder="Subject">
           <textarea name="body" id="contact_message" rows="8" aria-label="Email Message" placeholder="Your Message"></textarea>
-          <button type="submit" onclick="contacter(event)">Send Email</button>
+          <button class="btn" type="submit" onclick="contacter(event)">Send Email</button>
         </form>
       </div>
     </section>

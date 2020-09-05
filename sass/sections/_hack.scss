@@ -1,0 +1,170 @@
+
+// Hack Club class page
+
+#hack {
+    #pre {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    a, code {
+        color: #00F2D2;
+        font-family: monospace;
+        transition-duration: 0.2s;
+    }
+
+    a:hover {
+        color: darken(#00F2D2, 10);
+    }
+
+    hr {
+        background-color: darken(#00F2D2, 20);
+    }
+
+    footer {
+        border-color: darken(#00F2D2, 20);
+    }
+
+    section {
+        &:not(:last-of-type) {
+            margin-bottom: 60px;
+        }
+
+        .hack-row {
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+    }
+
+    .hack-title {
+        justify-content: space-between;
+        width: 100%;
+
+        #ico {
+            display: none;
+        }
+
+        #title {
+            font-size: 1.3rem;
+            text-align: right;
+        
+            padding-left: 50px;
+
+            .btn {
+                width: 250px;
+            }
+        }
+
+        @media (min-width: 400px) {
+            #ico {
+                display: block;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #ico {
+                width: 300px;
+            }
+    
+            #title {
+                font-size: 1.8rem;
+            
+                padding-left: 50px;
+    
+                .btn {
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    .block {
+        background-color: lighten($bg-primary, 8);
+        border-radius: 5px;
+        flex: 1 1;
+        padding: 20px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            &:not(:last-of-type) {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+
+        &.b2-1 {
+            flex: 2 1;
+        }
+
+        &.block-right {
+            h2 {
+                width: unset;
+            }
+
+            text-align: right;
+        }
+
+        h2 {
+            border: none;
+            color: #00F2D2;
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 2rem;
+        }
+    }
+
+    .vertibar {
+        h2 {
+            text-align: center;
+            width: unset;
+        }
+
+        span {
+            font-size: 4.5rem;
+            text-align: center;
+        }
+    }
+
+    #hack-cards {
+        @for $i from 0 through 4 {
+            :nth-child(#{($i)}) {
+                animation: fade-in 0.8s forwards;
+                animation-delay: #{$i * 150 - 150}ms;
+                opacity: 0;
+            }
+        }
+    }
+
+    #resources {
+        text-align: center;
+
+        h4 {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        p {
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    #cta a {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 15px;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
