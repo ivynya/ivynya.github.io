@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inclusivity | Integration Testing</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Kyle Lu | SDBagel">
+  <meta name="description" content="UI semantics can save you development effort and time by providing default functionality. UI semantics also help people who use accessibility features like screen readers and keyboard navigation to navigate your app. Learn about semantics in HTML and how you can use them to your and your users' benefit.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Inclusivity | Integration Testing">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="UI semantics can save you development effort and time by providing default functionality. UI semantics also help people who use accessibility features like screen readers and keyboard navigation to navigate your app. Learn about semantics in HTML and how you can use them to your and your users' benefit.">
+  <meta property="og:image" content="https://sdbagel.com/img/og_integration.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/site.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200;400;700&family=Poiret+One&display=swap" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176053434-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-176053434-1');
+  </script>
+</head>
+<body>
+  <main id="text-page" class="container">
+    <h1>Inclusivity</h1>
+    <nav class="socials flex-row">
+      <a href="./inclusivity">prev</a>
+      <a href="../integration-testing">all</a>
+      <a href="../integration-testing">next</a>
+    </nav>
+    <br>
+    <p><i>"Division, division, divisions, it’s all just divisions!"</i></p>
+    <p>Previously, I covered semantic code and what that might look like in a codebase. To recap, good code semantics can include properly naming variables, functions, and classes. Good code semantics and architecture will greatly benefit how maintainable, extensible, and readable your code is to other people and yourself in the future.</p>
+    <p>However, code semantics is only one side of the story. In web and app development, user interface (UI) semantics can save you development effort and time by providing default functionality. UI semantics also help people who use accessibility features like screen readers and keyboard navigation to navigate your app. A great example of an immediate benefit of semantics is keyboard navigation through the tab key. You might have used this feature before to quickly navigate between interactive elements on a webpage, like buttons, form inputs, and links. These semantics can be embedded as part of your markup (like in HTML) or manually specified through HTML attributes.</p>
+    <p>UI semantics are better for accessibility and navigation, but why? We already discussed tab navigation, but there are other types of keyboard navigation too. You might have accidentally hit spacebar on a webpage, annoyingly scrolling you down. What you might not realize is that this is also an accessibility feature, part of a standard set of defined behaviors. Pressing spacebar on a button element will trigger it, but to trigger a link, you need to press enter. These defined behaviors and readouts make it easier for people to navigate your site no matter what CSS you apply to elements.</p>
+    <p>It does not only help people who use accessibility tools, either. Proper semantics help search engines like Google index your page. What that means for you is a higher search ranking, meaning you can easily grow your site’s search performance and SEO by including semantics. Using links for sections like “Register Now” or “My Account” or some other portion of your site in a nav element can let search engines know what sections your site has. Proper semantics and content organization (like content flowing from top to bottom) push your site higher and can potentially even get your site a “card,” prominently displaying site from your content at the top of results in response to a search query.</p>
+    <p>That is a lot of info about why you should use UI semantics. But how do you implement them? There are two primary ways. HTML5 landmark elements are the best way to easy check semantics off your to-do list while putting in almost no effort. Button, anchor, label, input, and form tags all have default behaviors, and screen readers and search engine crawlers will recognize them. Tags like nav, section, article, and main behave like a division (div), but provide extra semantics on top. Image tags will have alt attributes that specify text that represents the image. Making use of these tags where possible is an easy step forward to having good semantics. However, what if you do not want to use a default element? Maybe your input is more complicated than a default HTML element will allow for. In this case, you can use ARIA attributes. There are many of these attributes, but some notable ones are aria-label and aria-role. These describe the text that should be read by scrapers and readers and the landmark element they represent, respectively. Note that if you set an aria-role, the element should implement default behaviors! So, a div with aria-role=button should activate on spacebar.</p>
+    <p>This is, of course, just a brief overview. A great resource to learn about semantics is the Mozilla Developer Network (MDN). I would recommend taking a look at your site and seeing if it could use a main tag, section tags, or if it has more than one h1 tag, uses buttons where links should be used, etc. Other great tools include automated tests like Lighthouse (built into Chrome devtools), Google Page Speed Insights, and accessibility testing extensions like Axe, available on the Chrome Web Store. Keep in mind semantics when you write your HTML markup, and your website will be that much better!</p>
+  </main>
+  <footer class="container footer">
+    <p><a href="../">Home</a> - <a href="../about">More About Me</a> - <a href="../integration-testing">My Blog</a></p>
+    <p>&copy; Kyle | SDBagel 2020</p>
+  </footer>
+</body>
+</html>
