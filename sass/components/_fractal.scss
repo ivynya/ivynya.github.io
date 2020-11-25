@@ -21,4 +21,14 @@
     justify-self: flex-end;
     margin-left: auto;
   }
+
+  &.fractal-bg {
+    background-image: linear-gradient(135deg, $shard-primary, $shard-tertiary);
+    margin-bottom: 30px;
+    padding: 15px;
+
+    @media (min-width: 768px) {
+      padding: 25px;
+    }
+  }
 }

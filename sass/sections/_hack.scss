@@ -47,6 +47,10 @@
             font-size: 1.3rem;
             text-align: right;
 
+            a {
+                font-size: 1.1rem;
+            }
+
             .btn {
                 width: 250px;
             }
@@ -55,6 +59,7 @@
         @media (min-width: 500px) {
             #ico {
                 display: block;
+                width: 200px;
             }
 
             #title {
@@ -71,6 +76,10 @@
                 font-size: 1.8rem;
             
                 padding-left: 50px;
+
+                a {
+                    font-size: 1.5rem;
+                }
     
                 .btn {
                     width: 300px;

@@ -284,6 +284,16 @@ main {
   justify-self: flex-end;
   margin-left: auto;
 }
+.fractal.fractal-bg {
+  background-image: linear-gradient(135deg, #494ca0, #4b3d8f);
+  margin-bottom: 30px;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .fractal.fractal-bg {
+    padding: 25px;
+  }
+}
 
 /* Shard - extensible & flexible cards */
 .shard {
@@ -553,28 +563,20 @@ hr {
     text-align: left;
     margin-right: 60px;
   }
+  .section-details .desc h2 {
+    width: 100%;
+  }
 
   .section-details-flipped .desc {
     margin-right: 0;
     margin-left: 60px;
     text-align: right;
   }
+  .section-details-flipped .desc h2 {
+    width: 100%;
+  }
   .section-details-flipped .container {
     flex-direction: row-reverse;
-  }
-
-  .section-details-center .desc {
-    margin: auto;
-    width: 320px;
-    text-align: center;
-  }
-  .section-details-center .desc h2 {
-    width: unset;
-    padding-bottom: 8px;
-  }
-  .section-details-center .container {
-    justify-content: center;
-    flex-direction: column;
   }
 }
 /* First section (About) */
@@ -771,12 +773,16 @@ hr {
   font-size: 1.3rem;
   text-align: right;
 }
+#hack .hack-title #title a {
+  font-size: 1.1rem;
+}
 #hack .hack-title #title .btn {
   width: 250px;
 }
 @media (min-width: 500px) {
   #hack .hack-title #ico {
     display: block;
+    width: 200px;
   }
   #hack .hack-title #title {
     padding-left: 50px;
@@ -789,6 +795,9 @@ hr {
   #hack .hack-title #title {
     font-size: 1.8rem;
     padding-left: 50px;
+  }
+  #hack .hack-title #title a {
+    font-size: 1.5rem;
   }
   #hack .hack-title #title .btn {
     width: 300px;
