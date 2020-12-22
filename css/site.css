@@ -586,11 +586,13 @@ hr {
   align-items: center;
   justify-content: center;
   min-height: 45vh;
+  max-height: 500px;
 }
 #about #pfp {
   border-radius: 50%;
   width: 200px;
   margin: auto;
+  margin-top: 0;
   transition-duration: 0.5s;
 }
 #about #bio {
