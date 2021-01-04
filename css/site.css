@@ -53,6 +53,8 @@ a.btn {
 html {
   font-family: nunito, sans-serif;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth; }
 
 body {
