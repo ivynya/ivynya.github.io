@@ -1,4 +1,5 @@
-# sdbagel.github.io
-The premium site for all your fresh bagels, bagels not included. Here, you can keep up with what I'm currently doing, what I've done in the past, and other similarly cool stuff, as well as get some information about me.
+# 302 Redirected → [ivy.direct](https://ivy.direct/hi)
 
-This was my very first website, ever! Pretty cool. It's since been updated to perform better and be a little bit fancier.
+This repo houses my old cover page, maintained for posterity at [sdbagel.com](https://sdbagel.com).
+
+For my latest work and updates, please visit my all-inclusive interactive portfolio experience, [Ivy Direct](https://ivy.direct/hi)!
