@@ -28,9 +28,8 @@
 .socials-fixed {
   a {
     display: block;
-    width: 25px;
     height: 25px;
-    padding: 5px;
+    padding: 5px 10px;
 
     &.focus {
       border-color: $highlight-primary;
