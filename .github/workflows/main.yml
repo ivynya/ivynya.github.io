@@ -7,12 +7,18 @@ on:
   pull_request:
   
 permissions:
-  id-token: write
+  contents: read
   pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
   
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -24,7 +30,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - uses: actions/upload-pages-artifact@v2
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@main
         with:
+          name: ivynya-github-io
           path: build
-      - uses: actions/deploy-pages@v3
+          retention-days: 1
+      - name: deploy to pages
+        id: deployment
+        uses: actions/deploy-pages@v1
