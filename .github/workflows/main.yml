@@ -5,7 +5,11 @@ on:
     branches:
       - main # Set a branch name to trigger deployment
   pull_request:
-
+  
+permissions:
+  id-token: write
+  pages: write
+  
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -13,9 +17,11 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
       - name: Install
         run: npm ci
-      - uses: actions/configure-pages@v1
       - name: Build
         run: npm run build
       - uses: actions/upload-pages-artifact@v2
