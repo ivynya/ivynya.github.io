@@ -1,14 +1,10 @@
 <script lang="ts">
+	import Navigate from "./Navigate.svelte";
+
 
 </script>
 
-<main>
-  <h1>Page</h1>
-  <p>Page content</p>
-</main>
+<Navigate />
 
 <style lang="scss">
-  main {
-    padding: 1rem;
-  }
 </style>

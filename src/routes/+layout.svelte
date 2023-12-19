@@ -17,6 +17,9 @@
 </script>
 
 <div class="app">
+  <header>
+    <h1>Directory</h1>
+  </header>
 	<main>
 		<slot />
 	</main>
@@ -27,23 +30,26 @@
 		overflow: hidden;
 	}
 
+  h1 {
+    color: var(--text-accent);
+    margin: 3rem 0;
+    line-height: 1;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
 	.app {
 		box-sizing: border-box;
-
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-
-		height: 100vh;
-		width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 		max-width: 1600px;
-		margin: auto;
-
-		opacity: 0;
-		overflow: scroll;
-		scroll-snap-type: x mandatory;
-
+    margin: auto;
+    width: fit-content;
 		scrollbar-width: none;
+
 		&::-webkit-scrollbar {
 			display: none;
 		}
@@ -51,19 +57,12 @@
 
 	main {
 		box-sizing: border-box;
-
 		display: grid;
-		grid-template-columns: 1;
-		grid-template-rows: 1;
-
+    //grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    //grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
 		flex: 1 1;
-		height: 100%;
 		min-width: 100%;
-		padding: 4vh 0;
-
-		overflow: auto;
 		transition: all 0.5s, min-width 1s;
-
-		position: relative;
 	}
 </style>

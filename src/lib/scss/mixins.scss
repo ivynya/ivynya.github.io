@@ -1,0 +1,44 @@
+
+// Mixins
+@mixin nm-shadow {
+	background: var(--background);
+	border: 1px solid;
+	border-color:
+		var(--border-primary)
+		var(--border-secondary)
+		var(--border-secondary)
+		var(--border-primary);
+	transition-duration: 0.5s;
+}
+
+@mixin nm-shadow-sm {
+	@include nm-shadow;
+	box-shadow:
+		var(--nm-shadow-sm-primary),
+		var(--nm-shadow-sm-secondary);
+	border-radius: var(--border-radius-sm);
+}
+
+@mixin nm-shadow-sm-inset {
+	@include nm-shadow;
+	box-shadow:
+		var(--nm-shadow-sm-primary) inset,
+		var(--nm-shadow-sm-secondary) inset;
+	border-radius: var(--border-radius-sm);
+}
+
+@mixin nm-shadow-md {
+	@include nm-shadow;
+	box-shadow:
+		var(--nm-shadow-md-primary),
+		var(--nm-shadow-md-secondary);
+	border-radius: var(--border-radius);
+}
+
+@mixin nm-shadow-md-inset {
+	@include nm-shadow;
+	box-shadow:
+		var(--nm-shadow-md-primary) inset,
+		var(--nm-shadow-md-secondary) inset;
+	border-radius: var(--border-radius);
+}
