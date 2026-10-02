@@ -3,6 +3,11 @@
 	import { isLight, stylesheet } from '$lib/style';
 	import { updateCurrentDayPercentage } from '$lib/time';
 
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+	let { children }: Props = $props();
+
 	let int: number;
 	onMount(() => {
 		stylesheet.subscribe((sheet) => {
@@ -21,7 +26,7 @@
 		<h1>Directory</h1>
 	</header>
 	<main>
-		<slot />
+		{@render children?.()}
 	</main>
 </div>
 
