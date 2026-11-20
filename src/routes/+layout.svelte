@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-	import { isLight, stylesheet } from '$lib/style';
-	import { updateCurrentDayPercentage } from '$lib/time';
+	import { isLight, stylesheet } from '#lib/style.ts';
+	import { updateCurrentDayPercentage } from '#lib/time.ts';
 
 	interface Props {
 		children?: import('svelte').Snippet;
